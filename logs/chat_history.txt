@@ -1,0 +1,23 @@
+
+======================================================================
+[2026-06-10 12:16:11]
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include:  
+- **Immigration Officers** (Sources 1, 2, 3)  
+- **Civil authorities** (Sources 1, 2)  
+- **Registration Officers** (Sources 1, 2)  
+- **Border Guarding Forces** (Sources 1, 2)  
+- **Coast Guard** (Sources 1, 2)  
+- **State and Union Territory authorities** (Sources 1, 2)  
+- **Security agencies designated by the Central Government** (Source 1)  
+- **Bureau of Immigration** (Sources 2, 4, 5)  
+
+The Bureau of Immigration authorizes these entities and oversees technical specifications for biometric collection (Sources 2, 4, 5). Page numbers: 7, 8, 9.
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: FRROCHAT_RAG_FACTS | Page: 7 | Type: pymupdf | Score: 0.7062
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.7008
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.6497

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Upload PDFs — PDF Extract Chatbot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-light: #6366f1;
+      --bg: #0f0f17;
+      --surface: #1a1a2e;
+      --surface2: #232340;
+      --text: #e2e2f0;
+      --text-muted: #8888aa;
+      --border: #2e2e50;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+    /* Navbar */
+    .navbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary-light) !important;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-link { color: var(--text-muted) !important; }
+    .nav-link:hover, .nav-link.active { color: var(--text) !important; }
+
+    /* Main */
+    .main-wrapper {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.2rem;
+    }
+    .page-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .page-subtitle { color: var(--text-muted); margin-bottom: 2rem; }
+
+    /* Drop zone */
+    .dropzone-card {
+      background: var(--surface);
+      border: 2px dashed var(--border);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all .2s;
+      position: relative;
+    }
+    .dropzone-card:hover, .dropzone-card.dragover {
+      border-color: var(--primary-light);
+      background: var(--surface2);
+    }
+    .dropzone-icon {
+      font-size: 3rem;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .dropzone-card input[type=file] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+    }
+    .dropzone-label { font-size: 1.1rem; font-weight: 600; }
+    .dropzone-hint { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem; }
+
+    /* File list */
+    .file-list { margin-top: 1.5rem; }
+    .file-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+    .file-icon { font-size: 1.4rem; color: var(--danger); }
+    .file-name { flex: 1; font-weight: 500; word-break: break-all; }
+    .file-size { color: var(--text-muted); font-size: 0.85rem; }
+    .file-remove { color: var(--text-muted); cursor: pointer; border: none; background: none; font-size: 1.1rem; }
+    .file-remove:hover { color: var(--danger); }
+
+    /* Progress */
+    .progress-section { margin-top: 1.5rem; }
+    .progress-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.7rem;
+    }
+    .progress-item .filename {
+      font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .progress { background: var(--border); border-radius: 6px; height: 6px; }
+    .progress-bar { background: var(--primary-light); border-radius: 6px; transition: width .3s; }
+    .progress-status { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+    /* Result cards */
+    .result-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .result-card.success { border-left: 4px solid var(--success); }
+    .result-card.error   { border-left: 4px solid var(--danger); }
+    .result-card .rc-header {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-weight: 600; margin-bottom: 0.5rem;
+    }
+    .result-stats { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .stat-badge {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .stat-badge span { color: var(--text); font-weight: 600; }
+
+    /* Buttons */
+    .btn-upload {
+      background: var(--primary);
+      border: none; color: #fff;
+      padding: 0.7rem 2.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-upload:hover { background: var(--primary-light); }
+    .btn-upload:disabled { opacity: .5; cursor: not-allowed; }
+
+    /* Index status */
+    .index-status {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin-top: 2rem;
+    }
+    .index-status h6 { margin-bottom: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: .05em; }
+    .status-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .status-item { text-align: center; }
+    .status-value { font-size: 1.6rem; font-weight: 700; color: var(--primary-light); }
+    .status-label { font-size: 0.75rem; color: var(--text-muted); }
+    .dot-ok   { color: var(--success); }
+    .dot-warn { color: var(--warning); }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand" href="/"><i class="fa-solid fa-brain"></i> PDF Chatbot</a>
+    <div class="d-flex gap-3">
+      <a class="nav-link" href="/"><i class="fa-solid fa-comments me-1"></i>Chat</a>
+      <a class="nav-link active" href="/upload"><i class="fa-solid fa-upload me-1"></i>Upload</a>
+    </div>
+  </div>
+</nav>
+
+<div class="main-wrapper">
+  <h1 class="page-title"><i class="fa-solid fa-file-pdf me-2" style="color:var(--danger)"></i>Upload Documents</h1>
+  <p class="page-subtitle">Upload PDF files to extract, index, and enable question-answering.</p>
+
+  <!-- Drop zone -->
+  <div class="dropzone-card" id="dropzone">
+    <input type="file" id="fileInput" accept=".pdf" multiple/>
+    <i class="fa-solid fa-cloud-arrow-up dropzone-icon"></i>
+    <div class="dropzone-label">Drag & drop PDFs here or click to browse</div>
+    <div class="dropzone-hint">Supports: text, tables, scanned (OCR), and image-embedded PDFs</div>
+  </div>
+
+  <!-- File list -->
+  <div class="file-list" id="fileList"></div>
+
+  <!-- Upload button -->
+  <div class="mt-3 d-flex gap-2 align-items-center" id="uploadControls" style="display:none!important">
+    <button class="btn-upload" id="uploadBtn" onclick="uploadFiles()">
+      <i class="fa-solid fa-rocket me-2"></i>Ingest & Index
+    </button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="clearFiles()">Clear</button>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-section" id="progressSection" style="display:none"></div>
+
+  <!-- Results -->
+  <div id="resultSection" style="display:none">
+    <hr style="border-color:var(--border); margin: 1.5rem 0;">
+    <h5 class="mb-3"><i class="fa-solid fa-check-circle me-2" style="color:var(--success)"></i>Ingestion Results</h5>
+    <div id="resultCards"></div>
+    <div class="mt-3">
+      <a href="/" class="btn-upload text-decoration-none" style="display:inline-block; padding:0.6rem 1.8rem">
+        <i class="fa-solid fa-comments me-2"></i>Go to Chat
+      </a>
+    </div>
+  </div>
+
+  <!-- Index Status -->
+  <div class="index-status" id="indexStatus">
+    <h6><i class="fa-solid fa-database me-1"></i>Index Status</h6>
+    <div class="status-row" id="statusRow">
+      <div class="status-item"><div class="status-value" id="st-vectors">—</div><div class="status-label">Vectors</div></div>
+      <div class="status-item"><div class="status-value" id="st-pdfs">—</div><div class="status-label">PDFs</div></div>
+      <div class="status-item"><div class="status-value" id="st-ready" class="">—</div><div class="status-label">Index Ready</div></div>
+    </div>
+    <div class="mt-2" style="font-size:0.8rem;color:var(--text-muted)" id="st-models"></div>
+  </div>
+</div>
+
+<script>
+const fileInput  = document.getElementById('fileInput');
+const dropzone   = document.getElementById('dropzone');
+const fileList   = document.getElementById('fileList');
+const controls   = document.getElementById('uploadControls');
+const progSec    = document.getElementById('progressSection');
+const resultSec  = document.getElementById('resultSection');
+const resultCards= document.getElementById('resultCards');
+
+let selectedFiles = [];
+
+// ── Drag & drop ──────────────────────────────────────────────────────────────
+dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
+dropzone.addEventListener('dragleave', ()=> dropzone.classList.remove('dragover'));
+dropzone.addEventListener('drop', e => {
+  e.preventDefault(); dropzone.classList.remove('dragover');
+  addFiles([...e.dataTransfer.files]);
+});
+fileInput.addEventListener('change', ()=> addFiles([...fileInput.files]));
+
+function addFiles(files) {
+  files.forEach(f => {
+    if (f.type === 'application/pdf' && !selectedFiles.find(x=>x.name===f.name))
+      selectedFiles.push(f);
+  });
+  renderFileList();
+}
+
+function renderFileList() {
+  fileList.innerHTML = '';
+  selectedFiles.forEach((f, i) => {
+    const div = document.createElement('div');
+    div.className = 'file-item';
+    div.innerHTML = `
+      <i class="fa-solid fa-file-pdf file-icon"></i>
+      <span class="file-name">${f.name}</span>
+      <span class="file-size">${(f.size/1024/1024).toFixed(2)} MB</span>
+      <button class="file-remove" onclick="removeFile(${i})" title="Remove"><i class="fa-solid fa-xmark"></i></button>`;
+    fileList.appendChild(div);
+  });
+  controls.style.display = selectedFiles.length ? 'flex' : 'none !important';
+  if (selectedFiles.length) controls.style.display = 'flex';
+  else controls.style.removeProperty('display');
+}
+
+function removeFile(i) {
+  selectedFiles.splice(i,1);
+  renderFileList();
+}
+
+function clearFiles() {
+  selectedFiles = [];
+  fileInput.value = '';
+  renderFileList();
+  progSec.style.display = 'none';
+  resultSec.style.display = 'none';
+}
+
+// ── Upload ───────────────────────────────────────────────────────────────────
+async function uploadFiles() {
+  if (!selectedFiles.length) return;
+  const btn = document.getElementById('uploadBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Processing…';
+
+  // Show progress bars
+  progSec.innerHTML = '';
+  progSec.style.display = 'block';
+  resultSec.style.display = 'none';
+
+  selectedFiles.forEach(f => {
+    progSec.innerHTML += `
+      <div class="progress-item" id="prog-${f.name}">
+        <div class="filename">
+          <span><i class="fa-solid fa-file-pdf me-1" style="color:var(--danger)"></i>${f.name}</span>
+          <small id="prog-status-${f.name}" style="color:var(--text-muted)">Uploading…</small>
+        </div>
+        <div class="progress"><div class="progress-bar" id="bar-${f.name}" style="width:0%"></div></div>
+      </div>`;
+  });
+
+  // Animate progress (simulated — real progress needs XHR)
+  const animBar = (name, pct) => {
+    const el = document.getElementById('bar-' + name);
+    if (el) el.style.width = pct + '%';
+  };
+  const setStatus = (name, msg) => {
+    const el = document.getElementById('prog-status-' + name);
+    if (el) el.textContent = msg;
+  };
+
+  selectedFiles.forEach(f => animBar(f.name, 20));
+
+  const formData = new FormData();
+  selectedFiles.forEach(f => formData.append('file', f));
+  selectedFiles.forEach(f => setStatus(f.name, 'Extracting text, tables & OCR…'));
+  selectedFiles.forEach(f => animBar(f.name, 50));
+
+  try {
+    const resp = await fetch('/api/upload', { method: 'POST', body: formData });
+    const data = await resp.json();
+    selectedFiles.forEach(f => animBar(f.name, 100));
+    selectedFiles.forEach(f => setStatus(f.name, 'Done'));
+
+    // Render results
+    resultCards.innerHTML = '';
+    (data.uploads || []).forEach(item => {
+      if (item.error) {
+        resultCards.innerHTML += `
+          <div class="result-card error">
+            <div class="rc-header"><i class="fa-solid fa-circle-xmark" style="color:var(--danger)"></i>${item.file}</div>
+            <div style="color:var(--danger); font-size:0.9rem">${item.error}</div>
+          </div>`;
+      } else {
+        const r = item.result;
+        resultCards.innerHTML += `
+          <div class="result-card success">
+            <div class="rc-header"><i class="fa-solid fa-circle-check" style="color:var(--success)"></i>${item.file}</div>
+            <div class="result-stats">
+              <div class="stat-badge">Pages <span>${r.pages||0}</span></div>
+              <div class="stat-badge">Tables <span>${r.tables||0}</span></div>
+              <div class="stat-badge">Images <span>${r.images||0}</span></div>
+              <div class="stat-badge">Chunks <span>${r.total_chunks||0}</span></div>
+              <div class="stat-badge">Total Indexed <span>${r.total_indexed||0}</span></div>
+              <div class="stat-badge">Time <span>${r.elapsed_sec||0}s</span></div>
+            </div>
+          </div>`;
+      }
+    });
+
+    resultSec.style.display = 'block';
+    await loadStatus();
+  } catch(err) {
+    selectedFiles.forEach(f => setStatus(f.name, 'Error: ' + err.message));
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fa-solid fa-rocket me-2"></i>Ingest & Index';
+  }
+}
+
+// ── Index status ─────────────────────────────────────────────────────────────
+async function loadStatus() {
+  try {
+    const r = await fetch('/api/status');
+    const d = await r.json();
+    document.getElementById('st-vectors').textContent = d.vector_count ?? 0;
+    document.getElementById('st-pdfs').textContent    = d.pdf_count ?? 0;
+    const readyEl = document.getElementById('st-ready');
+    readyEl.textContent  = d.index_ready ? '✓ Yes' : '✗ No';
+    readyEl.style.color  = d.index_ready ? 'var(--success)' : 'var(--danger)';
+    document.getElementById('st-models').innerHTML =
+      `Embed: <b>${d.embed_model}</b> &nbsp;|&nbsp; LLM: <b>${d.llm_model}</b> &nbsp;|&nbsp; Re-ranker: <b>${d.reranker}</b>`;
+  } catch {}
+}
+
+loadStatus();
+</script>
+</body>
+</html>

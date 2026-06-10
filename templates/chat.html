@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>PDF Extract Chatbot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-light: #6366f1;
+      --bg: #0f0f17;
+      --surface: #1a1a2e;
+      --surface2: #232340;
+      --surface3: #2a2a4a;
+      --text: #e2e2f0;
+      --text-muted: #8888aa;
+      --border: #2e2e50;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --user-bubble: #312e81;
+      --ai-bubble: var(--surface2);
+      --sidebar-w: 260px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; height: 100vh; display: flex; overflow: hidden; }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: var(--sidebar-w);
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      padding: 1rem 0.75rem;
+      gap: 0.5rem;
+      flex-shrink: 0;
+      overflow-y: auto;
+    }
+    .sidebar-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.5rem 0.4rem 1rem;
+      font-weight: 700; font-size: 1.05rem;
+      color: var(--primary-light);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.5rem;
+    }
+    .sidebar-logo i { font-size: 1.3rem; }
+    .sidebar-section { font-size: 0.68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); padding: 0.4rem 0.4rem 0.2rem; }
+    .sidebar-btn {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.55rem 0.7rem;
+      border-radius: 8px; cursor: pointer;
+      border: none; background: none; color: var(--text);
+      font-size: 0.88rem; width: 100%; text-align: left;
+      transition: background .15s;
+    }
+    .sidebar-btn:hover { background: var(--surface2); }
+    .sidebar-btn.active { background: var(--surface3); color: var(--primary-light); }
+    .sidebar-btn i { width: 16px; color: var(--text-muted); }
+    .sidebar-btn.active i { color: var(--primary-light); }
+
+    /* PDF chips */
+    .pdf-chip {
+      display: flex; align-items: center; gap: 0.4rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 0.3rem 0.6rem;
+      font-size: 0.8rem; color: var(--text-muted);
+      word-break: break-all;
+    }
+    .pdf-chip i { color: var(--danger); flex-shrink: 0; }
+    .no-pdfs { font-size: 0.8rem; color: var(--text-muted); padding: 0.3rem 0.4rem; }
+
+    /* ── Main Area ── */
+    .main-area { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+    /* Top bar */
+    .topbar {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 0.7rem 1.2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+    .topbar-title { font-weight: 600; font-size: 0.95rem; }
+    .topbar-actions { display: flex; gap: 0.5rem; }
+    .icon-btn {
+      background: none; border: 1px solid var(--border);
+      color: var(--text-muted); border-radius: 8px;
+      padding: 0.35rem 0.7rem; cursor: pointer; font-size: 0.85rem;
+      transition: all .15s;
+    }
+    .icon-btn:hover { background: var(--surface2); color: var(--text); }
+
+    /* View switcher */
+    .view-tabs {
+      display: flex; gap: 0.3rem;
+      background: var(--surface2); border-radius: 8px; padding: 3px;
+    }
+    .view-tab {
+      padding: 0.3rem 0.9rem; border-radius: 6px;
+      border: none; background: none; color: var(--text-muted);
+      font-size: 0.82rem; cursor: pointer; transition: all .15s;
+    }
+    .view-tab.active { background: var(--primary); color: #fff; }
+
+    /* ── Chat view ── */
+    #view-chat { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+
+    .messages-area {
+      flex: 1; overflow-y: auto; padding: 1.5rem 1.2rem;
+      display: flex; flex-direction: column; gap: 1.2rem;
+    }
+    .messages-area::-webkit-scrollbar { width: 6px; }
+    .messages-area::-webkit-scrollbar-track { background: transparent; }
+    .messages-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* Bubbles */
+    .msg-row { display: flex; gap: 0.7rem; align-items: flex-start; }
+    .msg-row.user { flex-direction: row-reverse; }
+    .msg-avatar {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; flex-shrink: 0;
+    }
+    .msg-avatar.ai   { background: var(--primary); }
+    .msg-avatar.user { background: var(--surface3); }
+
+    .bubble {
+      max-width: 72%;
+      padding: 0.7rem 1rem;
+      border-radius: 14px;
+      font-size: 0.9rem; line-height: 1.6;
+    }
+    .bubble.user { background: var(--user-bubble); border-top-right-radius: 4px; }
+    .bubble.ai   { background: var(--ai-bubble); border-top-left-radius: 4px; }
+    .bubble p    { margin-bottom: 0.4rem; }
+    .bubble p:last-child { margin-bottom: 0; }
+    .bubble pre  { background: #111; border-radius: 6px; padding: 0.7rem; overflow-x: auto; }
+    .bubble code { font-size: 0.85em; }
+    .bubble table { font-size: 0.82rem; border-collapse: collapse; width: 100%; margin: 0.5rem 0; }
+    .bubble th, .bubble td { border: 1px solid var(--border); padding: 0.3rem 0.5rem; }
+    .bubble th { background: var(--surface3); }
+
+    /* Source accordion */
+    .sources-toggle {
+      margin-top: 0.5rem;
+      font-size: 0.78rem; color: var(--text-muted);
+      cursor: pointer; display: flex; align-items: center; gap: 0.3rem;
+      border: none; background: none; padding: 0;
+    }
+    .sources-toggle:hover { color: var(--primary-light); }
+    .sources-panel { display: none; margin-top: 0.4rem; }
+    .sources-panel.open { display: block; }
+    .source-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 6px; padding: 0.4rem 0.6rem;
+      font-size: 0.77rem; color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .source-item .src-header { color: var(--primary-light); font-weight: 600; margin-bottom: 0.2rem; }
+    .source-snippet { color: var(--text-muted); font-style: italic; }
+    .elapsed-badge { font-size: 0.72rem; color: var(--text-muted); margin-left: 0.5rem; }
+
+    /* Typing indicator */
+    .typing-dots span {
+      display: inline-block; width: 6px; height: 6px;
+      background: var(--text-muted); border-radius: 50%; margin: 0 2px;
+      animation: bounce 1.2s infinite;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: .2s; }
+    .typing-dots span:nth-child(3) { animation-delay: .4s; }
+    @keyframes bounce { 0%,80%,100% { transform: scale(0); } 40% { transform: scale(1); } }
+
+    /* Input bar */
+    .input-area {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 0.9rem 1.2rem;
+      flex-shrink: 0;
+    }
+    .input-row {
+      display: flex; gap: 0.6rem; align-items: flex-end;
+    }
+    .chat-input {
+      flex: 1;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      resize: none;
+      outline: none;
+      max-height: 140px;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+    .chat-input:focus { border-color: var(--primary-light); }
+    .chat-input::placeholder { color: var(--text-muted); }
+    .send-btn {
+      background: var(--primary);
+      border: none; color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      transition: background .15s;
+      height: fit-content;
+    }
+    .send-btn:hover { background: var(--primary-light); }
+    .send-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+    /* ── History view ── */
+    #view-history {
+      display: none; flex: 1; overflow: hidden;
+      flex-direction: column;
+    }
+    .history-content {
+      flex: 1; overflow-y: auto;
+      padding: 1.2rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      white-space: pre-wrap;
+      color: var(--text-muted);
+      line-height: 1.6;
+      background: var(--bg);
+    }
+
+    /* ── Vision / Status view ── */
+    #view-vision {
+      display: none; flex: 1; overflow-y: auto;
+      flex-direction: column; padding: 1.5rem;
+      gap: 1.2rem;
+    }
+    .vision-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .vision-subtitle { color: var(--text-muted); font-size: 0.88rem; }
+
+    .pipeline-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem;
+    }
+    .pipeline-card h5 {
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--text-muted); margin-bottom: 1rem;
+    }
+    .pipeline-steps { display: flex; flex-direction: column; gap: 0.5rem; }
+    .pipe-step {
+      display: flex; align-items: center; gap: 0.8rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.7rem 0.9rem;
+    }
+    .pipe-icon {
+      width: 34px; height: 34px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .pipe-icon.blue   { background: #1e3a8a; color: #93c5fd; }
+    .pipe-icon.green  { background: #14532d; color: #86efac; }
+    .pipe-icon.purple { background: #3b0764; color: #d8b4fe; }
+    .pipe-icon.orange { background: #7c2d12; color: #fdba74; }
+    .pipe-icon.cyan   { background: #164e63; color: #67e8f9; }
+    .pipe-step-info { flex: 1; }
+    .pipe-step-name { font-weight: 600; font-size: 0.9rem; }
+    .pipe-step-desc { color: var(--text-muted); font-size: 0.8rem; }
+    .pipe-arrow { color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.7rem; }
+    .tech-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.8rem;
+    }
+    .tech-card .tc-role { font-size: 0.72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 0.2rem; }
+    .tech-card .tc-name { font-weight: 700; font-size: 0.95rem; }
+    .tech-card .tc-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+    .stat-grid { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .stat-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.9rem 1.2rem; min-width: 100px;
+      text-align: center; flex: 1;
+    }
+    .stat-box .sb-val { font-size: 1.8rem; font-weight: 700; color: var(--primary-light); }
+    .stat-box .sb-lbl { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .sidebar { display: none; }
+      .bubble { max-width: 92%; }
+    }
+
+    /* Welcome */
+    .welcome-msg {
+      text-align: center; padding: 3rem 1rem; opacity: .8;
+    }
+    .welcome-msg i { font-size: 3rem; color: var(--primary-light); margin-bottom: 1rem; display: block; }
+    .welcome-msg h4 { font-weight: 700; margin-bottom: 0.5rem; }
+    .welcome-msg p { color: var(--text-muted); font-size: 0.9rem; }
+    .suggestion-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.2rem; }
+    .chip {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 0.35rem 0.9rem;
+      font-size: 0.82rem; cursor: pointer; transition: all .15s;
+    }
+    .chip:hover { background: var(--surface3); border-color: var(--primary-light); color: var(--primary-light); }
+  </style>
+</head>
+<body>
+
+<!-- ─── Sidebar ─────────────────────────────────────────────────────────────── -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <i class="fa-solid fa-brain"></i> PDF Chatbot
+  </div>
+
+  <div class="sidebar-section">Navigation</div>
+  <button class="sidebar-btn active" onclick="switchView('chat', this)">
+    <i class="fa-solid fa-comments"></i> Chat
+  </button>
+  <button class="sidebar-btn" onclick="switchView('vision', this)">
+    <i class="fa-solid fa-diagram-project"></i> Architecture
+  </button>
+  <button class="sidebar-btn" onclick="switchView('history', this); loadHistory()">
+    <i class="fa-solid fa-clock-rotate-left"></i> History
+  </button>
+  <button class="sidebar-btn" onclick="window.location='/upload'">
+    <i class="fa-solid fa-upload"></i> Upload PDFs
+  </button>
+
+  <div class="sidebar-section" style="margin-top:1rem">Indexed Documents</div>
+  <div id="pdfChips">
+    <div class="no-pdfs">No PDFs indexed yet</div>
+  </div>
+
+  <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border);">
+    <div style="font-size: 0.75rem; color: var(--text-muted); padding: 0.3rem 0.4rem">
+      <div id="sb-vectors">Vectors: —</div>
+      <div id="sb-model">Model: —</div>
+    </div>
+  </div>
+</aside>
+
+<!-- ─── Main ────────────────────────────────────────────────────────────────── -->
+<div class="main-area">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-title" id="topbar-title">
+      <i class="fa-solid fa-comments me-1" style="color:var(--primary-light)"></i> Chat
+    </div>
+    <div class="topbar-actions">
+      <div class="view-tabs">
+        <button class="view-tab active" onclick="switchView('chat', null)" id="tab-chat">Chat</button>
+        <button class="view-tab" onclick="switchView('vision', null)" id="tab-vision">Architecture</button>
+        <button class="view-tab" onclick="switchView('history', null); loadHistory()" id="tab-history">History</button>
+      </div>
+      <button class="icon-btn" onclick="clearChat()" title="Clear chat"><i class="fa-solid fa-trash-can"></i></button>
+      <a href="/upload" class="icon-btn text-decoration-none" title="Upload PDFs"><i class="fa-solid fa-upload"></i></a>
+    </div>
+  </div>
+
+  <!-- ── Chat View ── -->
+  <div id="view-chat" style="display:flex;flex-direction:column;flex:1;min-height:0">
+    <div class="messages-area" id="messages">
+      <div class="welcome-msg" id="welcome">
+        <i class="fa-solid fa-robot"></i>
+        <h4>PDF Extract Chatbot</h4>
+        <p>Upload PDFs and ask questions. I'll search across text, tables, and images.</p>
+        <div class="suggestion-chips">
+          <div class="chip" onclick="setQuery(this.textContent)">Summarise this document</div>
+          <div class="chip" onclick="setQuery(this.textContent)">What are the main topics?</div>
+          <div class="chip" onclick="setQuery(this.textContent)">List all tables found</div>
+          <div class="chip" onclick="setQuery(this.textContent)">What does page 1 say?</div>
+        </div>
+      </div>
+    </div>
+    <div class="input-area">
+      <div class="input-row">
+        <textarea class="chat-input" id="chatInput" rows="1"
+          placeholder="Ask anything about your PDFs…"
+          onkeydown="handleKey(event)"
+          oninput="autoResize(this)"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── History View ── -->
+  <div id="view-history" style="display:none;flex-direction:column;flex:1;overflow:hidden">
+    <div style="padding:0.8rem 1.2rem; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between">
+      <span style="font-size:0.9rem; font-weight:600"><i class="fa-solid fa-clock-rotate-left me-2" style="color:var(--primary-light)"></i>Chat History Log</span>
+      <button class="icon-btn" onclick="clearHistory()"><i class="fa-solid fa-trash-can me-1"></i>Clear</button>
+    </div>
+    <div class="history-content" id="historyContent">Loading…</div>
+  </div>
+
+  <!-- ── Vision / Architecture View ── -->
+  <div id="view-vision" style="display:none;overflow-y:auto;flex:1;padding:1.5rem;gap:1.2rem;flex-direction:column">
+
+    <div>
+      <div class="vision-title"><i class="fa-solid fa-diagram-project me-2" style="color:var(--primary-light)"></i>System Architecture</div>
+      <div class="vision-subtitle">Full RAG pipeline — from PDF upload to Qwen3 answer</div>
+    </div>
+
+    <!-- Pipeline diagram -->
+    <div class="pipeline-card">
+      <h5><i class="fa-solid fa-sitemap me-1"></i>Ingestion Pipeline</h5>
+      <div class="pipeline-steps">
+        <div class="pipe-step">
+          <div class="pipe-icon blue"><i class="fa-solid fa-file-pdf"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">1. PDF Upload</div>
+            <div class="pipe-step-desc">Flask receives file → saved to uploads/</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon blue"><i class="fa-solid fa-font"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">2. Text Extraction — PyMuPDF</div>
+            <div class="pipe-step-desc">Fast native text extraction per page</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon orange"><i class="fa-solid fa-eye"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">3. OCR Fallback — PaddleOCR</div>
+            <div class="pipe-step-desc">Scanned/image pages → rendered at 2× and OCR'd</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon green"><i class="fa-solid fa-table"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">4. Table Extraction — Docling</div>
+            <div class="pipe-step-desc">Structured tables → Markdown representation</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon cyan"><i class="fa-solid fa-image"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">5. Image Extraction — PyMuPDF + PaddleOCR</div>
+            <div class="pipe-step-desc">Embedded images extracted → OCR'd for text</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon purple"><i class="fa-solid fa-scissors"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">6. Chunking</div>
+            <div class="pipe-step-desc">512-char chunks with 80-char overlap + metadata</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon purple"><i class="fa-solid fa-vector-square"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">7. Embedding — BAAI/bge-m3</div>
+            <div class="pipe-step-desc">1024-dim dense vectors, normalised for cosine</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon cyan"><i class="fa-solid fa-database"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">8. FAISS Index — IndexFlatIP</div>
+            <div class="pipe-step-desc">Inner-product search, persisted to disk</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-card">
+      <h5><i class="fa-solid fa-comments me-1"></i>RAG Query Pipeline</h5>
+      <div class="pipeline-steps">
+        <div class="pipe-step">
+          <div class="pipe-icon blue"><i class="fa-solid fa-keyboard"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">1. User Query</div>
+            <div class="pipe-step-desc">Natural language question from UI</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon purple"><i class="fa-solid fa-vector-square"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">2. Query Embedding — BAAI/bge-m3</div>
+            <div class="pipe-step-desc">Same model used for ingestion</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon cyan"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">3. FAISS Retrieval — Top 20</div>
+            <div class="pipe-step-desc">Fast approximate nearest-neighbour search</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon orange"><i class="fa-solid fa-sort-amount-down"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">4. Re-ranking — bge-reranker-large</div>
+            <div class="pipe-step-desc">Cross-encoder re-scores; top 5 retained</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon green"><i class="fa-solid fa-file-lines"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">5. Prompt Assembly</div>
+            <div class="pipe-step-desc">System prompt + context chunks + user query</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon purple"><i class="fa-solid fa-robot"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">6. LLM — Qwen3 via Ollama</div>
+            <div class="pipe-step-desc">Grounded answer with page citations</div>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="pipe-step">
+          <div class="pipe-icon blue"><i class="fa-solid fa-file-alt"></i></div>
+          <div class="pipe-step-info">
+            <div class="pipe-step-name">7. Log → chat_history.txt</div>
+            <div class="pipe-step-desc">Q, A, and source citations persisted</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="pipeline-card">
+      <h5><i class="fa-solid fa-layer-group me-1"></i>Technology Stack</h5>
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tc-role">Text Extraction</div><div class="tc-name">PyMuPDF</div><div class="tc-desc">Fast native PDF text/image extraction</div></div>
+        <div class="tech-card"><div class="tc-role">Tables</div><div class="tc-name">Docling</div><div class="tc-desc">Structural table understanding</div></div>
+        <div class="tech-card"><div class="tc-role">OCR</div><div class="tc-name">PaddleOCR</div><div class="tc-desc">Scanned & image page OCR</div></div>
+        <div class="tech-card"><div class="tc-role">Image Extraction</div><div class="tc-name">PyMuPDF</div><div class="tc-desc">Embedded image extraction</div></div>
+        <div class="tech-card"><div class="tc-role">Embeddings</div><div class="tc-name">BAAI/bge-m3</div><div class="tc-desc">1024-dim multilingual dense vectors</div></div>
+        <div class="tech-card"><div class="tc-role">Vector Search</div><div class="tc-name">FAISS</div><div class="tc-desc">IndexFlatIP — exact inner product</div></div>
+        <div class="tech-card"><div class="tc-role">Re-ranking</div><div class="tc-name">bge-reranker-large</div><div class="tc-desc">Cross-encoder precision boost</div></div>
+        <div class="tech-card"><div class="tc-role">LLM</div><div class="tc-name">Qwen3 / Ollama</div><div class="tc-desc">Local inference, no API key needed</div></div>
+        <div class="tech-card"><div class="tc-role">Backend</div><div class="tc-name">Flask</div><div class="tc-desc">Lightweight Python API server</div></div>
+        <div class="tech-card"><div class="tc-role">Frontend</div><div class="tc-name">HTML + Bootstrap 5</div><div class="tc-desc">Responsive dark-theme UI</div></div>
+      </div>
+    </div>
+
+    <!-- Live stats -->
+    <div class="pipeline-card">
+      <h5><i class="fa-solid fa-gauge me-1"></i>Live Index Stats</h5>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="sb-val" id="vis-vectors">—</div><div class="sb-lbl">Vectors</div></div>
+        <div class="stat-box"><div class="sb-val" id="vis-pdfs">—</div><div class="sb-lbl">PDFs</div></div>
+        <div class="stat-box"><div class="sb-val" id="vis-topk">20→5</div><div class="sb-lbl">Retrieve→Rerank</div></div>
+        <div class="stat-box"><div class="sb-val" id="vis-chunk">512</div><div class="sb-lbl">Chunk Size</div></div>
+      </div>
+    </div>
+
+  </div><!-- /view-vision -->
+
+</div><!-- /main-area -->
+
+<script>
+/* ── View switching ───────────────────────────────────────────────────────── */
+function switchView(name, sideBtn) {
+  ['chat','history','vision'].forEach(v => {
+    document.getElementById('view-'+v).style.display = 'none';
+  });
+  document.getElementById('view-'+name).style.display = 'flex';
+
+  ['tab-chat','tab-history','tab-vision'].forEach(t => document.getElementById(t)?.classList.remove('active'));
+  document.getElementById('tab-'+name)?.classList.add('active');
+
+  document.querySelectorAll('.sidebar-btn').forEach(b => b.classList.remove('active'));
+  if (sideBtn) sideBtn.classList.add('active');
+
+  if (name === 'vision') loadVisionStats();
+}
+
+/* ── Auto-resize textarea ────────────────────────────────────────────────── */
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 140) + 'px';
+}
+
+/* ── Keyboard shortcut ───────────────────────────────────────────────────── */
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+
+function setQuery(text) {
+  const inp = document.getElementById('chatInput');
+  inp.value = text;
+  autoResize(inp);
+  inp.focus();
+}
+
+/* ── Chat ─────────────────────────────────────────────────────────────────── */
+let messageCount = 0;
+
+async function sendMessage() {
+  const inp   = document.getElementById('chatInput');
+  const query = inp.value.trim();
+  if (!query) return;
+
+  const sendBtn = document.getElementById('sendBtn');
+  sendBtn.disabled = true;
+  inp.value = '';
+  autoResize(inp);
+
+  // Remove welcome message
+  const welcome = document.getElementById('welcome');
+  if (welcome) welcome.remove();
+
+  appendMessage('user', query);
+  const typingId = appendTyping();
+
+  try {
+    const resp = await fetch('/api/chat', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({query})
+    });
+    const data = await resp.json();
+    removeTyping(typingId);
+
+    if (data.error) {
+      appendMessage('ai', `⚠️ Error: ${data.error}`);
+    } else {
+      appendMessage('ai', data.answer, data.sources, data.elapsed);
+    }
+  } catch(err) {
+    removeTyping(typingId);
+    appendMessage('ai', `⚠️ Network error: ${err.message}`);
+  } finally {
+    sendBtn.disabled = false;
+    inp.focus();
+  }
+}
+
+function appendMessage(role, text, sources, elapsed) {
+  const id  = 'msg-' + (++messageCount);
+  const row = document.createElement('div');
+  row.className = `msg-row ${role}`;
+  row.id = id;
+
+  const avatar = role === 'ai'
+    ? `<div class="msg-avatar ai"><i class="fa-solid fa-robot"></i></div>`
+    : `<div class="msg-avatar user"><i class="fa-solid fa-user"></i></div>`;
+
+  const html = marked.parse(text || '');
+  let sourcesHtml = '';
+  if (sources && sources.length) {
+    const sid = 'src-' + id;
+    sourcesHtml = `
+      <button class="sources-toggle" onclick="toggleSources('${sid}')">
+        <i class="fa-solid fa-chevron-right" id="arr-${sid}"></i>
+        ${sources.length} source${sources.length>1?'s':''} used
+        ${elapsed ? `<span class="elapsed-badge">${elapsed}s</span>` : ''}
+      </button>
+      <div class="sources-panel" id="${sid}">
+        ${sources.map((s,i)=>`
+          <div class="source-item">
+            <div class="src-header"><i class="fa-solid fa-file-pdf me-1" style="color:var(--danger)"></i>${s.pdf} — Page ${s.page} <span style="color:var(--text-muted);font-weight:400">(${s.source}, score: ${s.score})</span></div>
+            <div class="source-snippet">${escapeHtml(s.snippet)}</div>
+          </div>`).join('')}
+      </div>`;
+  }
+
+  row.innerHTML = role === 'ai'
+    ? `${avatar}<div><div class="bubble ai">${html}${sourcesHtml}</div></div>`
+    : `${avatar}<div class="bubble user">${escapeHtml(text)}</div>`;
+
+  document.getElementById('messages').appendChild(row);
+  scrollToBottom();
+
+  // Highlight code blocks
+  row.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el));
+}
+
+function toggleSources(sid) {
+  const panel = document.getElementById(sid);
+  const arr   = document.getElementById('arr-' + sid);
+  panel.classList.toggle('open');
+  arr.style.transform = panel.classList.contains('open') ? 'rotate(90deg)' : '';
+}
+
+function appendTyping() {
+  const id  = 'typing-' + Date.now();
+  const row = document.createElement('div');
+  row.className = 'msg-row'; row.id = id;
+  row.innerHTML = `
+    <div class="msg-avatar ai"><i class="fa-solid fa-robot"></i></div>
+    <div class="bubble ai">
+      <div class="typing-dots"><span></span><span></span><span></span></div>
+    </div>`;
+  document.getElementById('messages').appendChild(row);
+  scrollToBottom();
+  return id;
+}
+
+function removeTyping(id) {
+  document.getElementById(id)?.remove();
+}
+
+function scrollToBottom() {
+  const el = document.getElementById('messages');
+  el.scrollTop = el.scrollHeight;
+}
+
+function clearChat() {
+  const msgs = document.getElementById('messages');
+  msgs.innerHTML = `
+    <div class="welcome-msg" id="welcome">
+      <i class="fa-solid fa-robot"></i>
+      <h4>PDF Extract Chatbot</h4>
+      <p>Upload PDFs and ask questions. I'll search across text, tables, and images.</p>
+      <div class="suggestion-chips">
+        <div class="chip" onclick="setQuery(this.textContent)">Summarise this document</div>
+        <div class="chip" onclick="setQuery(this.textContent)">What are the main topics?</div>
+        <div class="chip" onclick="setQuery(this.textContent)">List all tables found</div>
+        <div class="chip" onclick="setQuery(this.textContent)">What does page 1 say?</div>
+      </div>
+    </div>`;
+}
+
+function escapeHtml(str) {
+  return (str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ── History ─────────────────────────────────────────────────────────────── */
+async function loadHistory() {
+  document.getElementById('historyContent').textContent = 'Loading…';
+  try {
+    const r = await fetch('/api/history');
+    const d = await r.json();
+    document.getElementById('historyContent').textContent = d.history || '(No history yet)';
+  } catch { document.getElementById('historyContent').textContent = 'Error loading history.'; }
+}
+
+async function clearHistory() {
+  if (!confirm('Clear all chat history?')) return;
+  await fetch('/api/clear', {method:'DELETE'});
+  document.getElementById('historyContent').textContent = '(Cleared)';
+}
+
+/* ── Status / Vision Stats ───────────────────────────────────────────────── */
+async function loadStatus() {
+  try {
+    const r = await fetch('/api/status');
+    const d = await r.json();
+
+    // Sidebar
+    document.getElementById('sb-vectors').textContent = `Vectors: ${d.vector_count ?? 0}`;
+    document.getElementById('sb-model').textContent   = `LLM: ${d.llm_model ?? '—'}`;
+
+    // PDF chips
+    const chips = document.getElementById('pdfChips');
+    if (d.pdfs && d.pdfs.length) {
+      chips.innerHTML = d.pdfs.map(p=>`
+        <div class="pdf-chip"><i class="fa-solid fa-file-pdf"></i>${p}</div>`).join('');
+    } else {
+      chips.innerHTML = '<div class="no-pdfs">No PDFs indexed yet</div>';
+    }
+  } catch {}
+}
+
+async function loadVisionStats() {
+  try {
+    const r = await fetch('/api/status');
+    const d = await r.json();
+    document.getElementById('vis-vectors').textContent = d.vector_count ?? 0;
+    document.getElementById('vis-pdfs').textContent    = d.pdf_count ?? 0;
+  } catch {}
+}
+
+// Init
+loadStatus();
+</script>
+</body>
+</html>
