@@ -93,22 +93,50 @@ def api_upload():
 
     return jsonify({"uploads": results})
 
-# ─── API: Chat ────────────────────────────────────────────────────────────────
+# ─── API: Chat (blocking) ────────────────────────────────────────────────────
 
 @app.route("/api/chat", methods=["POST"])
 def api_chat():
     data  = request.get_json(force=True)
     query = (data.get("query") or "").strip()
-
     if not query:
         return jsonify({"error": "Empty query"}), 400
-
     try:
         result = rag.answer(query)
         return jsonify(result)
     except Exception as e:
         logger.exception("RAG error")
         return jsonify({"error": str(e)}), 500
+
+# ─── API: Chat (streaming SSE) ───────────────────────────────────────────────
+
+@app.route("/api/chat/stream", methods=["POST"])
+def api_chat_stream():
+    """
+    Server-Sent Events endpoint.
+    Each event is a JSON line; final event has {"done": true, ...}.
+    """
+    data  = request.get_json(force=True)
+    query = (data.get("query") or "").strip()
+    if not query:
+        return jsonify({"error": "Empty query"}), 400
+
+    def generate():
+        try:
+            for line in rag.answer_stream(query):
+                yield f"data: {line}\n\n"
+        except Exception as e:
+            logger.exception("Stream RAG error")
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return Response(
+        stream_with_context(generate()),
+        mimetype="text/event-stream",
+        headers={
+            "Cache-Control":   "no-cache",
+            "X-Accel-Buffering": "no",   # disable nginx buffering if behind proxy
+        }
+    )
 
 # ─── API: Status ──────────────────────────────────────────────────────────────
 
@@ -138,6 +166,23 @@ def api_status():
 def api_pdfs():
     return jsonify({"pdfs": list_ingested_pdfs()})
 
+# ─── API: Delete PDF ─────────────────────────────────────────────────────────
+
+@app.route("/api/delete-pdf", methods=["DELETE"])
+def api_delete_pdf():
+    data     = request.get_json(force=True)
+    pdf_name = (data.get("pdf") or "").strip()
+    if not pdf_name:
+        return jsonify({"error": "Missing 'pdf' field"}), 400
+    try:
+        summary = ingest.delete_pdf_from_index(pdf_name)
+        # Reload RAG index so the deleted chunks are no longer searchable
+        rag.load_index()
+        return jsonify(summary)
+    except Exception as e:
+        logger.exception(f"Delete error for {pdf_name}")
+        return jsonify({"error": str(e)}), 500
+
 # ─── API: Chat History ────────────────────────────────────────────────────────
 
 @app.route("/api/history", methods=["GET"])
@@ -163,4 +208,4 @@ def serve_image(filename):
 # ─── Run ──────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)
+    app.run(host="0.0.0.0", port=8001, debug=False, use_reloader=False)

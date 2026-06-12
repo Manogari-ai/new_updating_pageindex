@@ -72,7 +72,14 @@
       font-size: 0.8rem; color: var(--text-muted);
       word-break: break-all;
     }
-    .pdf-chip i { color: var(--danger); flex-shrink: 0; }
+    .pdf-chip .pdf-icon { color: var(--danger); flex-shrink: 0; }
+    .pdf-chip .pdf-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pdf-chip .pdf-del {
+      flex-shrink: 0; background: none; border: none; padding: 0 2px;
+      color: var(--text-muted); cursor: pointer; line-height: 1;
+      border-radius: 3px; transition: color .15s;
+    }
+    .pdf-chip .pdf-del:hover { color: var(--danger); }
     .no-pdfs { font-size: 0.8rem; color: var(--text-muted); padding: 0.3rem 0.4rem; }
 
     /* ── Main Area ── */
@@ -629,25 +636,96 @@ async function sendMessage() {
   const typingId = appendTyping();
 
   try {
-    const resp = await fetch('/api/chat', {
+    const resp = await fetch('/api/chat/stream', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({query})
     });
-    const data = await resp.json();
-    removeTyping(typingId);
 
-    if (data.error) {
-      appendMessage('ai', `⚠️ Error: ${data.error}`);
-    } else {
-      appendMessage('ai', data.answer, data.sources, data.elapsed);
+    if (!resp.ok) { throw new Error(`HTTP ${resp.status}`); }
+
+    const reader  = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let   buffer  = '';
+    let   tokens  = '';
+    let   msgId   = null;   // id of the streaming AI bubble
+
+    const flush = (sources, elapsed) => {
+      // Replace typing indicator with final rendered bubble
+      removeTyping(typingId);
+      if (msgId) document.getElementById(msgId)?.remove();
+      appendMessage('ai', tokens, sources, elapsed);
+    };
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      // SSE lines: "data: {...}\n\n"
+      const lines = buffer.split('\n');
+      buffer = lines.pop();   // keep incomplete last line
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        let evt;
+        try { evt = JSON.parse(line.slice(6)); } catch { continue; }
+
+        if (evt.error) {
+          flush([], 0);
+          appendMessage('ai', `⚠️ Error: ${evt.error}`);
+          return;
+        }
+
+        if (evt.done) {
+          flush(evt.sources || [], evt.elapsed || 0);
+          return;
+        }
+
+        if (evt.token !== undefined) {
+          // First token → replace typing indicator with a live bubble
+          if (!msgId) {
+            removeTyping(typingId);
+            msgId = appendStreamBubble();
+          }
+          tokens += evt.token;
+          updateStreamBubble(msgId, tokens);
+        }
+      }
     }
+
+    // Fallback if stream ended without a "done" event
+    flush([], 0);
+
   } catch(err) {
     removeTyping(typingId);
     appendMessage('ai', `⚠️ Network error: ${err.message}`);
   } finally {
     sendBtn.disabled = false;
     inp.focus();
+  }
+}
+
+/** Create an empty AI bubble for live token streaming; returns its id. */
+function appendStreamBubble() {
+  const id  = 'stream-' + Date.now();
+  const row = document.createElement('div');
+  row.className = 'msg-row ai';
+  row.id = id;
+  row.innerHTML =
+    `<div class="msg-avatar ai"><i class="fa-solid fa-robot"></i></div>` +
+    `<div><div class="bubble ai" id="bubble-${id}"></div></div>`;
+  document.getElementById('messages').appendChild(row);
+  scrollToBottom();
+  return id;
+}
+
+/** Re-render the live bubble with accumulated markdown text. */
+function updateStreamBubble(id, text) {
+  const bubble = document.getElementById('bubble-' + id);
+  if (bubble) {
+    bubble.innerHTML = marked.parse(text);
+    scrollToBottom();
   }
 }
 
@@ -757,6 +835,29 @@ async function clearHistory() {
   document.getElementById('historyContent').textContent = '(Cleared)';
 }
 
+async function deletePdf(pdfName) {
+  if (!confirm(`Remove "${pdfName}" and all its chunks from the index?`)) return;
+  const chip = document.getElementById('chip-' + CSS.escape(pdfName));
+  if (chip) { chip.style.opacity = '0.4'; chip.style.pointerEvents = 'none'; }
+  try {
+    const r = await fetch('/api/delete-pdf', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pdf: pdfName })
+    });
+    const d = await r.json();
+    if (d.status === 'ok' || d.status === 'not_found') {
+      await loadStatus(); // refreshes chip list
+    } else {
+      alert('Delete failed: ' + (d.error || d.message || 'unknown error'));
+      if (chip) { chip.style.opacity = ''; chip.style.pointerEvents = ''; }
+    }
+  } catch(e) {
+    alert('Delete failed: ' + e.message);
+    if (chip) { chip.style.opacity = ''; chip.style.pointerEvents = ''; }
+  }
+}
+
 /* ── Status / Vision Stats ───────────────────────────────────────────────── */
 async function loadStatus() {
   try {
@@ -771,7 +872,13 @@ async function loadStatus() {
     const chips = document.getElementById('pdfChips');
     if (d.pdfs && d.pdfs.length) {
       chips.innerHTML = d.pdfs.map(p=>`
-        <div class="pdf-chip"><i class="fa-solid fa-file-pdf"></i>${p}</div>`).join('');
+        <div class="pdf-chip" id="chip-${CSS.escape(p)}">
+          <i class="fa-solid fa-file-pdf pdf-icon"></i>
+          <span class="pdf-name" title="${p}">${p}</span>
+          <button class="pdf-del" title="Remove ${p}" onclick="deletePdf('${p.replace(/'/g,"\\'")}')">
+            <i class="fa-solid fa-trash-can" style="font-size:0.7rem"></i>
+          </button>
+        </div>`).join('');
     } else {
       chips.innerHTML = '<div class="no-pdfs">No PDFs indexed yet</div>';
     }

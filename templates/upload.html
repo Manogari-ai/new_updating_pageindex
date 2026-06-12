@@ -99,6 +99,20 @@
     .file-size { color: var(--text-muted); font-size: 0.85rem; }
     .file-remove { color: var(--text-muted); cursor: pointer; border: none; background: none; font-size: 1.1rem; }
     .file-remove:hover { color: var(--danger); }
+    .indexed-pdf-row {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 0.35rem 0.65rem;
+      font-size: 0.82rem; color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+    .indexed-pdf-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .indexed-pdf-del {
+      flex-shrink: 0; background: none; border: 1px solid var(--border);
+      border-radius: 4px; padding: 1px 8px; font-size: 0.75rem;
+      color: var(--text-muted); cursor: pointer; transition: color .15s, border-color .15s;
+    }
+    .indexed-pdf-del:hover { color: var(--danger); border-color: var(--danger); }
 
     /* Progress */
     .progress-section { margin-top: 1.5rem; }
@@ -233,6 +247,8 @@
       <div class="status-item"><div class="status-value" id="st-ready" class="">—</div><div class="status-label">Index Ready</div></div>
     </div>
     <div class="mt-2" style="font-size:0.8rem;color:var(--text-muted)" id="st-models"></div>
+    <!-- Indexed PDF list -->
+    <div id="indexedPdfList" style="margin-top:0.9rem"></div>
   </div>
 </div>
 
@@ -388,7 +404,46 @@ async function loadStatus() {
     readyEl.style.color  = d.index_ready ? 'var(--success)' : 'var(--danger)';
     document.getElementById('st-models').innerHTML =
       `Embed: <b>${d.embed_model}</b> &nbsp;|&nbsp; LLM: <b>${d.llm_model}</b> &nbsp;|&nbsp; Re-ranker: <b>${d.reranker}</b>`;
+    // Render indexed PDF list
+    const listEl = document.getElementById('indexedPdfList');
+    if (listEl) {
+      if (d.pdfs && d.pdfs.length) {
+        listEl.innerHTML = `
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:0.4rem">Indexed Documents</div>
+          ${d.pdfs.map(p => `
+            <div class="indexed-pdf-row" id="urow-${CSS.escape(p)}">
+              <i class="fa-solid fa-file-pdf" style="color:var(--danger);flex-shrink:0"></i>
+              <span class="indexed-pdf-name" title="${p}">${p}</span>
+              <button class="indexed-pdf-del" title="Remove ${p}" onclick="deleteIndexedPdf('${p.replace(/'/g,"\\'")}')">Remove</button>
+            </div>`).join('')}`;
+      } else {
+        listEl.innerHTML = '<div style="font-size:0.8rem;color:var(--text-muted)">No PDFs indexed yet.</div>';
+      }
+    }
   } catch {}
+}
+
+async function deleteIndexedPdf(pdfName) {
+  if (!confirm(`Remove "${pdfName}" and all its chunks from the index?`)) return;
+  const row = document.getElementById('urow-' + CSS.escape(pdfName));
+  if (row) { row.style.opacity = '0.4'; row.style.pointerEvents = 'none'; }
+  try {
+    const r = await fetch('/api/delete-pdf', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pdf: pdfName })
+    });
+    const d = await r.json();
+    if (d.status === 'ok' || d.status === 'not_found') {
+      await loadStatus();
+    } else {
+      alert('Delete failed: ' + (d.error || d.message || 'unknown'));
+      if (row) { row.style.opacity = ''; row.style.pointerEvents = ''; }
+    }
+  } catch(e) {
+    alert('Delete failed: ' + e.message);
+    if (row) { row.style.opacity = ''; row.style.pointerEvents = ''; }
+  }
 }
 
 loadStatus();

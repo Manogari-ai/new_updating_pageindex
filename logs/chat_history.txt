@@ -21,3 +21,446 @@ Sources:
   - PDF: FRROCHAT_RAG_FACTS | Page: 7 | Type: pymupdf | Score: 0.7062
   - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.7008
   - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.6497
+
+======================================================================
+[2026-06-10 12:32:48]
+Q: What are the categories for Student Visas
+
+A: The categories for Student Visas (S) are as follows:  
+- **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.  
+- **S-2**: School-level education.  
+- **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+- **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.  
+- **S-5**: Internships in India.  
+- **S-6**: For internships at Indian companies, educational institutions, NGOs, or foreign missions (as per Source 5).  
+
+(Note: S-5 and S-6 both relate to internships, but they are distinct categories in the context provided.)  
+**Citations**: Source 1 (Page 12), Source 5 (Page 31).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+  - PDF: QA_for_Bot_Final | Page: 31 | Type: pymupdf | Score: 0.5965
+  - PDF: QA_for_Bot_Final | Page: 31 | Type: pymupdf | Score: 0.5924
+
+======================================================================
+[2026-06-10 12:55:43]
+Q: whta are the visa types under student visa
+
+A: The Student Visa (S) categories in India are as follows:  
+• **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.  
+• **S-2**: School-level education.  
+• **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+• **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.  
+• **S-5**: For internships in India.  
+
+These categories are detailed on **page 12** of the document.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.5894
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.5875
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.5552
+  - PDF: QA_for_Bot_Final | Page: 31 | Type: pymupdf | Score: 0.5351
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.5215
+
+======================================================================
+[2026-06-10 12:59:26]
+Q: visa type for long term investORS
+
+A: According to page 11, there is a specific visa for long-term investors called the **PRS (Permanent Residency Status)**, designed for foreign investors seeking long-term stay options.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.7151
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.7058
+  - PDF: QA_for_Bot_Final | Page: 62 | Type: pymupdf | Score: 0.5843
+  - PDF: QA_for_Bot_Final | Page: 13 | Type: pymupdf | Score: 0.5664
+  - PDF: QA_for_Bot_Final | Page: 27 | Type: pymupdf | Score: 0.5443
+
+======================================================================
+[2026-06-10 13:02:46]
+Q: who is the controlling authority of coimbatore immigration
+
+A: The controlling authority for the Immigration Check Post (ICP) at Coimbatore (Tamil Nadu) is **FRRO Chennai**.  
+According to page 8 of Source 3.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 9 | Type: pymupdf | Score: 0.6201
+  - PDF: QA_for_Bot_Final | Page: 8 | Type: pymupdf | Score: 0.6126
+  - PDF: QA_for_Bot_Final | Page: 8 | Type: pymupdf | Score: 0.6098
+  - PDF: FRROCHAT_RAG_FACTS | Page: 1 | Type: pymupdf | Score: 0.6010
+  - PDF: QA_for_Bot_Final | Page: 1 | Type: pymupdf | Score: 0.5903
+
+======================================================================
+[2026-06-10 13:12:49]
+Q: do i have to vaccinate to visit india
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.7020
+  - PDF: FRROCHAT_RAG_FACTS | Page: 5 | Type: pymupdf | Score: 0.6744
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6729
+  - PDF: FRROCHAT_RAG_FACTS | Page: 4 | Type: pymupdf | Score: 0.6590
+  - PDF: FRROCHAT_RAG_FACTS | Page: 5 | Type: pymupdf | Score: 0.6570
+
+======================================================================
+[2026-06-10 14:20:12]
+Q: Is Kenya a notified country for yellow fever
+
+A: Yes, Kenya is a notified Yellow Fever endemic country. According to Source 1 (Page 3), Kenya is listed among the 30 African countries. Source 2 (Page 6) also explicitly includes Kenya in the list of African nations classified as Yellow Fever endemic. Additionally, Source 3 (Page 6) and Source 4 (Page 6) confirm Kenya's inclusion in the African list of notified countries.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6907
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6818
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6657
+  - PDF: FRROCHAT_RAG_FACTS | Page: 7 | Type: pymupdf | Score: 0.6088
+
+======================================================================
+[2026-06-10 14:41:52]
+Q: what is java?
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: pymupdf | Score: 0.4295
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: pymupdf | Score: 0.3881
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.3858
+  - PDF: QA_for_Bot_Final | Page: 32 | Type: pymupdf | Score: 0.3820
+  - PDF: QA_for_Bot_Final | Page: 33 | Type: pymupdf | Score: 0.3804
+
+======================================================================
+[2026-06-10 14:45:55]
+Q: FRRO Bangalur
+
+A: The FRRO Bangalore jurisdiction includes New Mangalore.  
+According to page 10 of the document.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5409
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.4872
+  - PDF: QA_for_Bot_Final | Page: 9 | Type: pymupdf | Score: 0.4770
+  - PDF: QA_for_Bot_Final | Page: 30 | Type: pymupdf | Score: 0.4751
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.4641
+
+======================================================================
+[2026-06-10 15:00:33]
+Q: frro contact directory chennai
+
+A: According to Source 2 (Page 74), the FRRO contact details for **Chennai** are as follows:  
+- **In-Charge**: Sh. Krishnaraj, IPS  
+- **Address**: 6th floor, Nikarthil Chambers, Opposite Sarvaram Bio Park, Mini Bypass Road, Arayidathupalam, Kozhikode, Kerala - 673004  
+- **Phone**: 0495-2323550, 0495-2320650  
+- **Email**: frro-clt@nic.in; frrocal@nic.in  
+
+Note: The address listed under "Chennai" appears to correspond to **Kozhikode, Kerala** instead of Chennai. This may be an error in the document.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: pymupdf | Score: 0.5791
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: pymupdf | Score: 0.5717
+
+======================================================================
+[2026-06-10 15:42:46]
+Q: FRRO CONTACT DIRECTORY Chennai
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.6688
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.6347
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: pymupdf | Score: 0.6225
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.6135
+  - PDF: QA_for_Bot_Final | Page: 8 | Type: pymupdf | Score: 0.6067
+
+======================================================================
+[2026-06-10 15:48:21]
+Q: eta
+
+A: ETA (Electronic Travel Authorization) is an authorization that allows the bearer access into India. It is **not** equivalent to an eVisa; upon entry into India by an Immigration Officer, it becomes an eVisa, which is then stamped on the passport at designated ICPs.  
+
+- **ETA Expiry Date**: The last date allowing entry into India (per Source 2, Page 77).  
+- **Visa Expiry Date**: The last date the visa remains valid (per Source 2, Page 77).  
+
+If arrival at the immigration counter occurs **after the ETA expiry date** due to flight delays, entry may not be permitted unless a **transit visa** is obtained for extended waiting periods (per Source 5, Page 78).  
+
+For transit purposes, a 24-hour stay in the airport is allowed for connecting flights, but longer stays require a transit visa.  
+
+**Citations**:  
+- ETA definition and eVisa distinction: Source 2, Page 77.  
+- Expiry date differences: Source 2, Page 77.  
+- Transit visa rules: Source 5, Page 78.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: pymupdf | Score: 0.5827
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: pymupdf | Score: 0.5799
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.5174
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.4915
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4731
+
+======================================================================
+[2026-06-10 16:00:01]
+Q: i'm a afghanisthan national i would like to start business in india what are the types of visa
+
+A: To start a business in India, as an Afghan national, you should apply for a **Business Visa**. This visa is specifically for individuals visiting India to establish or explore the possibility of setting up an industrial or business venture (Source 1, Page 26). If you are a promoter or majority shareholder of the company, the Business Visa is the correct category (Source 2, Page 39). 
+
+If you are working for a company in India (e.g., as an employee), an **Employment Visa** would apply, but this is not relevant for starting a business. The **E-3 Visa** (Employment) is for work-related activities, including voluntary work, but not for business establishment (Source 5, Page 39). 
+
+Always ensure compliance with immigration regulations and consult official guidelines for specific eligibility criteria.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 26 | Type: pymupdf | Score: 0.6384
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.6225
+  - PDF: QA_for_Bot_Final | Page: 38 | Type: pymupdf | Score: 0.6059
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6017
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.6003
+
+======================================================================
+[2026-06-10 17:45:17]
+Q: RAG system architecture
+
+A: The RAG system architecture, as described in the documents, combines **semantic vector search** using **FAISS** with **local Large Language Models (LLMs)** via **Ollama**. The deployment follows a **lightweight local architecture** where:  
+- The **client** interacts through a **browser interface**.  
+- A **Flask backend server** (running on port 8003) handles **PDF ingestion** and **user query processing**.  
+- The backend connects to the **Ollama AI engine** (port 11434) for generating AI-based responses.  
+
+This setup enables efficient retrieval and generation, leveraging both document data and model intelligence. (Citations: Page 4 [Source 2], Page 8 [Source 5]).
+
+Sources:
+  - PDF: PageIndex_doc | Page: 20 | Type: pymupdf | Score: 0.6125
+  - PDF: PageIndex_doc | Page: 4 | Type: pymupdf | Score: 0.5825
+  - PDF: PageIndex_doc | Page: 24 | Type: pymupdf | Score: 0.5780
+  - PDF: PageIndex_doc | Page: 8 | Type: pymupdf | Score: 0.5724
+  - PDF: PageIndex_doc | Page: 15 | Type: pymupdf | Score: 0.5704
+
+======================================================================
+[2026-06-10 17:50:28]
+Q: PDF QA Workflow
+
+A: The PDF QA workflow involves the following steps:  
+1. **PDF Upload**: Users upload PDFs via the `/upload_pdf` endpoint, triggering the `process_pdfs()` function to extract and process document content (Source 3, Page 13).  
+2. **FAISS Indexing**: `ingest.py` builds a FAISS vector database from extracted PDF content (Source 2, Page 9; Source 5, Page 3).  
+3. **Query Handling**: When a chat query is received, `app.py` routes it to `rag.py`'s `ask()` function, which executes a pipeline including:  
+   - **Direct QA**: Keyword-based retrieval.  
+   - **Exact Entry/Section**: Precise document section matching.  
+   - **Vector Search**: Semantic retrieval using FAISS embeddings.  
+   - **LLM Fallback**: Generates answers if retrieval methods fail (Source 2, Page 9).  
+4. **Answer Delivery**: The system returns a JSON-formatted answer via the API (Source 2, Page 9).  
+
+This workflow ensures secure, enterprise-grade PDF-based question answering with strict validation to prevent hallucinations (Source 4, Page 3).
+
+Sources:
+  - PDF: PageIndex_doc | Page: 7 | Type: pymupdf | Score: 0.6280
+  - PDF: PageIndex_doc | Page: 9 | Type: pymupdf | Score: 0.5862
+  - PDF: PageIndex_doc | Page: 13 | Type: pymupdf | Score: 0.5829
+  - PDF: PageIndex_doc | Page: 3 | Type: pymupdf | Score: 0.5797
+  - PDF: PageIndex_doc | Page: 3 | Type: pymupdf | Score: 0.5757
+
+======================================================================
+[2026-06-10 18:00:34]
+Q: What is an ETA
+
+A: According to page 77, an ETA (Electronic Travel Authorization) is an authorization that allows the bearer access into the issuing country (India). It is explicitly stated that ETA is NOT an eVisa; however, when the bearer is allowed entry into India by an Immigration Officer, it becomes an eVisa, which is then stamped on the passport at designated ICPs upon production of a valid ETA.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: pymupdf | Score: 0.6088
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: pymupdf | Score: 0.6056
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4797
+  - PDF: QA_for_Bot_Final | Page: 16 | Type: pymupdf | Score: 0.3857
+  - PDF: QA_for_Bot_Final | Page: 47 | Type: pymupdf | Score: 0.3660
+
+============================================================
+[2026-06-11 12:34:13]
+Q: Summarise this document
+
+A: The document fragments mention:  
+1. A specific industry is referenced on a list (Src 1, p.39).  
+2. An incomplete phrase ("tem.") (Src 2, p.50).  
+3. NGOs are mentioned (Src 3, p.12).  
+
+No further details are available due to incomplete or truncated text.
+
+Sources:
+  - QA_for_Bot_Final | p.39 | pymupdf | 0.5145
+  - QA_for_Bot_Final | p.50 | pymupdf | 0.5081
+  - QA_for_Bot_Final | p.12 | pymupdf | 0.4990
+
+============================================================
+[2026-06-11 12:39:33]
+Q: What are the main topics?
+
+A: The main topics discussed in the context are immigration regulations related to foreigner stay in India, including definitions of "total aggregate stay," "continuous stay," and maximum duration of stay in transit at airports (Src 1 | p.78). The third source (Src 3 | p.39) mentions a specific industry on a list but provides incomplete information.
+
+Sources:
+  - QA_for_Bot_Final | p.78 | pymupdf | 0.4655
+  - QA_for_Bot_Final | p.50 | pymupdf | 0.4396
+  - QA_for_Bot_Final | p.39 | pymupdf | 0.4231
+
+============================================================
+[2026-06-11 12:43:24]
+Q: List all tables found
+
+A: I could not find this in the uploaded documents.
+
+Sources:
+  - QA_for_Bot_Final | p.39 | pymupdf | 0.5017
+  - QA_for_Bot_Final | p.50 | pymupdf | 0.4472
+  - QA_for_Bot_Final | p.12 | pymupdf | 0.4107
+
+============================================================
+[2026-06-11 12:47:30]
+Q: Summarise this document
+
+A: The document contains fragmented information:  
+- A mention of a "specific industry" on a list (Src 1, p.39).  
+- An incomplete phrase "tem." (Src 2, p.50).  
+- A reference to NGOs (Src 3, p.12).  
+
+No coherent summary can be formed due to incomplete content.
+
+Sources:
+  - QA_for_Bot_Final | p.39 | pymupdf | 0.5145
+  - QA_for_Bot_Final | p.50 | pymupdf | 0.5081
+  - QA_for_Bot_Final | p.12 | pymupdf | 0.4990
+
+======================================================================
+[2026-06-11 14:16:53]
+Q: Summarise this document
+
+A: The document contains fragmented information across multiple pages, primarily discussing regulatory and legal aspects related to specific industries, NGOs, and procedures involving the FRRO/FRO (Foreigners Registration Office). Key points include:  
+- References to industries on a list (Page 39).  
+- Mention of legal actions by FRRO/FRO (Page 19) and emergency documentation requirements (Page 30).  
+- A note about NGOs (Page 12).  
+- Unclear or possibly incomplete sections (e.g., "tem" on Page 50).  
+
+Due to the fragmented and incomplete nature of the content, a comprehensive summary is challenging. Some sections lack context or clarity.  
+
+**Note:** The document does not provide a unified theme or detailed explanations, making it difficult to extract a cohesive summary.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.5081
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.4990
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.4722
+  - PDF: QA_for_Bot_Final | Page: 30 | Type: pymupdf | Score: 0.4617
+
+======================================================================
+[2026-06-11 14:46:12]
+Q: yellow fever person allowed in india
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6339
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6109
+  - PDF: QA_for_Bot_Final | Page: 23 | Type: pymupdf | Score: 0.5883
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.5699
+  - PDF: QA_for_Bot_Final | Page: 33 | Type: pymupdf | Score: 0.5049
+
+======================================================================
+[2026-06-11 14:49:34]
+Q: Is Kenya a notified country for yellow fever
+
+A: According to page 3 of the document, Kenya is listed among the 30 African countries considered Yellow Fever endemic. The answer is **yes**, Kenya is a notified country for Yellow Fever.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6907
+  - PDF: QA_for_Bot_Final | Page: 23 | Type: pymupdf | Score: 0.5631
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.5520
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.5364
+  - PDF: QA_for_Bot_Final | Page: 52 | Type: pymupdf | Score: 0.4893
+
+======================================================================
+[2026-06-11 15:16:43]
+Q: Technical specifications for biometric collection
+
+A: The technical specifications for biometric collection are set by the Central Government and may be updated periodically. For the most current details, refer to the Ministry of Home Affairs website at [www.mha.gov.in](www.mha.gov.in) (see Source 1, Page 4).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.6091
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.5160
+  - PDF: QA_for_Bot_Final | Page: 21 | Type: pymupdf | Score: 0.5051
+  - PDF: QA_for_Bot_Final | Page: 21 | Type: pymupdf | Score: 0.4985
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.4942
+
+======================================================================
+[2026-06-11 16:02:16]
+Q: Is Kenya a notified country for yellow fever
+
+A: Yes, Kenya is a notified country for Yellow Fever. According to page 3 of the document, Kenya is listed among the 30 African countries considered Yellow Fever endemic.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6907
+  - PDF: QA_for_Bot_Final | Page: 23 | Type: pymupdf | Score: 0.5631
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.5520
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.5364
+  - PDF: QA_for_Bot_Final | Page: 52 | Type: pymupdf | Score: 0.4893
+
+======================================================================
+[2026-06-12 11:12:42]
+Q: How many FRROs are there and in which cities
+
+A: There are **15 FRROs** in India, located in the following cities:  
+**Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum**.  
+
+This information is consistent across multiple sources (e.g., Source 1, Page 59; Source 2, Page 2).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5876
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5862
+
+======================================================================
+[2026-06-12 11:21:02]
+Q: What are the main topics
+
+A: The main topics covered in the provided context include:  
+1. **Definitions of stay types**:  
+   - *Total aggregate stay*: Total period of stay in India during a calendar year (page 78).  
+   - *Continuous stay*: Period of stay since the last arrival in India (page 78).  
+   - *Calendar year*: Defined as 1st January to 31st December of the current year (page 78).  
+
+2. **Maximum stay on a Tourist Visa**:  
+   - Limited to 180 days in a calendar year (page 78).  
+
+3. **Transit stay rules**:  
+   - Permitted duration in airport-designated areas if not leaving premises (page 78).  
+
+Other sources mention less specific topics (e.g., industry lists, travel advisories), but these are not elaborated further in the context.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4453
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4254
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.4213
+  - PDF: QA_for_Bot_Final | Page: 52 | Type: pymupdf | Score: 0.4037
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4007
+
+======================================================================
+[2026-06-12 11:35:21]
+Q: What are the main topics?
+
+A: The main topics discussed in the provided context include:  
+1. **Definitions related to stay in India**:  
+   - "Total aggregate stay in a calendar year" (Page 78/4).  
+   - "Continuous stay" (Page 78/4).  
+   - Calendar year definition (Page 78/4).  
+
+2. **Visa stay restrictions**:  
+   - Maximum stay allowed on a Tourist Visa (180 days) (Page 78/4).  
+
+3. **Travel advisories**:  
+   - Information on finding up-to-date travel advisories for other countries (Page 52/5).  
+
+These topics focus on visa regulations, stay duration definitions, and travel guidance.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4655
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4396
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.4231
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4202
+  - PDF: QA_for_Bot_Final | Page: 52 | Type: pymupdf | Score: 0.4104
