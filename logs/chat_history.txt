@@ -464,3 +464,1772 @@ Sources:
   - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.4231
   - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4202
   - PDF: QA_for_Bot_Final | Page: 52 | Type: pymupdf | Score: 0.4104
+
+======================================================================
+[2026-06-12 12:56:13]
+Q: How many FRROs are there and in which cities
+
+A: There are **15 FRROs** in the following cities: **Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum**.  
+
+This information is confirmed across multiple sources:  
+- The count of 15 FRROs is stated in **Source 1 (Page 59)** and **Source 2 (Page 2)**.  
+- The list of cities is detailed in **Source 2 (Page 2)** and **Source 4 (Page 3)**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+  - PDF: FRROCHAT_RAG_FACTS | Page: 3 | Type: pymupdf | Score: 0.6247
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-15 15:24:28]
+Q: Summarise this document
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.5081
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.4990
+
+======================================================================
+[2026-06-15 15:27:07]
+Q: What are the main topics?
+
+A: The main topics covered in the provided documents are:  
+
+1. **Environmental and Biodiversity Topics** (Source 1, Page 9):  
+   - BMC Details (committee information), Domain Knowledge Holder (traditional knowledge experts), Species (flora/fauna with scientific/local names), Pest management, Market Transactions, Landscape types, and Crop Best Practices.  
+
+2. **Technical System Architecture and Workflows** (Sources 2, 3, 4):  
+   - FAISS Vector Database Workflow, Ollama Integration, API Flow Architecture, Security Architecture, Deployment Architecture, Monitoring and Logging, Performance Optimization, Folder Structure, and RAG Pipeline Explanation.  
+
+3. **Legal/Immigration Policies** (Source 5, Page 78):  
+   - Definitions related to foreigner stay in India, such as "total aggregate stay," "continuous stay," and permitted duration in transit.  
+
+These topics span environmental documentation, technical system design, and immigration regulations.
+
+Sources:
+  - PDF: aaa | Page: 9 | Type: pymupdf | Score: 0.5598
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4793
+  - PDF: PageIndex_doc | Page: 2 | Type: pymupdf | Score: 0.4762
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4655
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4655
+
+======================================================================
+[2026-06-15 15:34:16]
+Q: Summarise this document
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.5081
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.4990
+
+======================================================================
+[2026-06-15 15:50:45]
+Q: list the PDF's namas?
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5529
+  - PDF: PageIndex_doc | Page: 6 | Type: pymupdf | Score: 0.5441
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5279
+  - PDF: PageIndex_doc | Page: 13 | Type: pymupdf | Score: 0.5229
+  - PDF: PageIndex_doc | Page: 3 | Type: pymupdf | Score: 0.5227
+
+======================================================================
+[2026-06-15 17:40:40]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: According to Source 1 | Page 41:  
+**Yes**, you can leave your ship to catch a flight from a nearby airport, but only with **prior approval from the competent authority**. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed with your journey.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+  - PDF: QA_for_Bot_Final | Page: 57 | Type: pymupdf | Score: 0.5488
+  - PDF: QA_for_Bot_Final | Page: 26 | Type: pymupdf | Score: 0.5482
+
+======================================================================
+[2026-06-15 18:07:05]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: Yes, you can leave your ship to catch a flight, but only with prior approval from the competent authority. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed with your journey within the permitted period. If your stay exceeds the allowed time, the visa becomes invalid, and you’ll need to apply for a fresh Transit Visa.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-15 18:17:51]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: Yes, you can leave your ship to catch a flight from a nearby airport, but only with prior approval from the competent authority. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed with your journey. However, if your stay exceeds the allowed period, the visa becomes invalid, and you would need to apply for a fresh Transit Visa. Additionally, ensure you have e-Migrate clearance to board the ship, as immigration authorities strictly verify this status.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-15 18:21:47]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: According to Source 1 (Page 41), yes, you can leave your ship to catch a flight from a nearby airport **only with prior approval from the competent authority** and **if you hold a valid ticket for a scheduled air service**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-16 10:25:46]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: According to Source 1 | Page 41, yes, you can leave your ship to catch a flight from a nearby airport **only with prior approval from the competent authority** and **if you hold a valid ticket for a scheduled air service**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-16 10:40:23]
+Q: frro chennai
+
+A: FRRO Chennai's jurisdiction includes:  
+- **Chennai and Kattupalli** (Source 2, Page 10).  
+- **Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands** (Source 3, Page 59).  
+
+This covers both specific ports and broader territorial areas under its jurisdiction.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-16 10:43:53]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: Yes, you can leave your ship to catch a flight from a nearby airport, but only with prior approval from the competent authority. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed with your journey.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-16 10:47:24]
+Q: frro chennai
+
+A: FRRO Chennai is responsible for Chennai and Kattupalli ports. Additionally, it covers Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-17 10:02:09]
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: Yes, you can leave your ship to catch a flight from a nearby airport, but only with prior approval from the competent authority. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed with your journey.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-17 10:03:23]
+Q: frro chennai
+
+A: FRRO Chennai has jurisdiction over Chennai and Kattupalli as seaports. Additionally, it covers Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-17 10:10:09]
+Q: what is java
+
+A: I couldn't find anything about Java in the documents you've uploaded. The system described uses Python and other technologies, but there's no mention of Java or related concepts.
+
+Sources:
+  - PDF: PageIndex_doc | Page: 3 | Type: pymupdf | Score: 0.4323
+  - PDF: PageIndex_doc | Page: 6 | Type: pymupdf | Score: 0.4264
+  - PDF: PageIndex_doc | Page: 19 | Type: pymupdf | Score: 0.4118
+
+======================================================================
+[2026-06-17 10:13:34]
+Q: How many FRROs are there and in which cities
+
+A: There are 15 FRROs in total, located in the following cities: Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+
+======================================================================
+[2026-06-17 10:17:35]
+Q: frro directory chennai
+
+A: The FRRO in Chennai covers Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands. It also oversees seaports such as Chennai and Kattupalli.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5358
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5316
+  - PDF: FRROCHAT_RAG_FACTS | Page: 3 | Type: pymupdf | Score: 0.5142
+
+======================================================================
+[2026-06-17 10:19:58]
+Q: frro contact directory chennai
+
+A: Here’s the FRRO contact information for Chennai:  
+
+**In-Charge:** Sh. Krishnaraj, IPS  
+**Address:** 6th floor, Nikarthil Chambers, Opposite Sarvaram Bio Park, Mini Bypass Road, Arayidathupalam, Kozhikode, Kerala - 673004  
+**Phone:** 0495-2323550, 0495-2320650  
+**Email:** frro-clt@nic.in; frrocal@nic.in  
+
+Note: The address lists Kozhikode, Kerala, but the entry is labeled under "Chennai." This might be an error in the document. Let me know if you need further clarification!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-17 10:21:32]
+Q: POE OFFICE DIRECTORY Guwahati Office
+
+A: The Guwahati Office is located at RPO Building, Rani Bagan, Basistha Road, 3rd Bylane, Guwahati-781028. You can contact them via phone at 8287020033 or email at poeguwahati@mea.gov.in.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: pymupdf | Score: 0.6764
+  - PDF: QA_for_Bot_Final | Page: 46 | Type: pymupdf | Score: 0.5988
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: pymupdf | Score: 0.5825
+
+======================================================================
+[2026-06-17 10:36:46] (response time: 174339ms)
+Q: frro contact directory chennai
+
+A: I couldn't find anything about that in the documents you've uploaded.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-17 10:45:59] (response time: 72273ms)
+Q: frro contact directory chennai
+
+A: **In-Charge:** Sh. Krishnaraj, IPS  
+**Address:** 6th floor, Nikarthil Chambers, Opposite Sarvaram Bio Park, Mini Bypass Road, Arayidathupalam, Kozhikode, Kerala - 673004  
+**Phone:** 0495-2323550, 0495-2320650  
+**Email:** frro-clt@nic.in; frrocal@nic.in
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-17 11:56:56] (response time: 119107ms)
+Q: frro contact directory chennai
+
+A: **In-Charge:** Sh. Krishnaraj, IPS  
+**Address:** 6th floor, Nikarthil Chambers, Opposite Sarvaram Bio Park, Mini Bypass Road, Arayidathupalam, Kozhikode, Kerala - 673004  
+**Phone:** 0495-2323550, 0495-2320650  
+**Email:** frro-clt@nic.in; frrocal@nic.in
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-17 12:41:20] (response time: 171659ms)
+Q: frro contact directory chennai
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-17 13:20:52] (response time: 124386ms)
+Q: frro contact directory chennai
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5974
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5898
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5876
+
+======================================================================
+[2026-06-18 10:44:24] (response time: 190356ms)
+Q: frro chennai
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 11:05:08] (response time: 156341ms)
+Q: frro chennai
+
+A: I couldn't generate a clear answer from the documents for that question — please try rephrasing it.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 12:12:19]
+Q: frro chennai
+
+A: FRRO Chennai has jurisdiction over Chennai and Kattupalli ports. Additionally, it covers Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 12:26:02]
+Q: frro chennai
+
+A: 
+
+Response Time: 138.01s
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 12:34:16]
+Q: frro chennai
+
+A: FRRO Chennai is responsible for the following areas:  
+- **Ports**: Chennai and Kattupalli.  
+- **States/Union Territories**: Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands.  
+
+Let me know if you need further details!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 12:38:08]
+Q: frro chennai contact directory
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5968
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5938
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: pymupdf | Score: 0.5893
+
+======================================================================
+[2026-06-18 12:39:57]
+Q: What are the categories for Student Visas
+
+A: Student Visas (S) are categorized as follows:  
+- **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.  
+- **S-2**: School-level education.  
+- **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+- **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.  
+- **S-5**: Internships in India.  
+
+This structure covers academic, cultural, and professional pursuits under the Student Visa category.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-18 12:43:06]
+Q: What are the categories for Student Visas
+
+A: The categories for Student Visas (S) are as follows:  
+• **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.  
+• **S-2**: School-level education.  
+• **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+• **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.  
+• **S-5**: For individuals undertaking an Internship in India.  
+
+*(According to page 12 of Source 1 | PDF: QA_for_Bot_Final)*
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-18 12:59:15] (response time: 134853ms)
+Q: What are the categories for Student Visas
+
+A: **Student Visa Categories (S):**  
+- **S-1:** Higher education, exchange programs, and skill development in Ayush or Theological studies.  
+- **S-2:** School-level education.  
+- **S-3:** Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+- **S-4:** Research scholars, visiting faculty, and G-20 Talent Visa holders.  
+- **S-5:** Internships in India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-18 14:17:12] (response time: 118688ms)
+Q: How many FRROs are there and in which cities
+
+A: **Number of FRROs:** 15  
+**Cities:**  
+- Ahmedabad  
+- Amritsar  
+- Bangalore  
+- Calicut  
+- Chandigarh  
+- Chennai  
+- Cochin  
+- Delhi  
+- Guwahati  
+- Hyderabad  
+- Jaipur  
+- Kolkata  
+- Lucknow  
+- Mumbai  
+- Trivandrum
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+
+======================================================================
+[2026-06-18 14:18:41] (response time: 38479ms)
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: **Answer:**  
+Yes, but only with prior approval from the competent authority. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-18 14:20:33] (response time: 72940ms)
+Q: Authorities authorized to collect biometric information in India
+
+A: **Authorities authorized to collect biometric information in India:**  
+- **Immigration Officers**  
+- **Civil authorities**  
+- **Registration Officers**  
+- **Border Guarding Forces**  
+- **Coast Guard**  
+- **Specified State or Union Territory authorities**  
+- **Security agencies designated by the Central Government**  
+
+Note: Foreign nationals may be required to submit biometrics via the Central Government's electronic portal.
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-18 14:23:03] (response time: 62933ms)
+Q: frro chennai directories
+
+A: **FRRO Chennai Jurisdiction:**  
+- **Chennai**  
+- **Kattupalli**  
+
+**Additional Jurisdiction (from Source 2):**  
+- **Tamil Nadu**  
+- **Union Territory of Puducherry**  
+- **Andaman & Nicobar Islands**  
+
+*I couldn't find any directories (e.g., contact details, addresses, or phone numbers) for FRRO Chennai in the provided documents.*
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5362
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5322
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.5027
+
+======================================================================
+[2026-06-18 15:10:55] (response time: 74994ms)
+Q: Kattupalli
+
+A: I couldn't find anything about that in the documents you've uploaded.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.3312
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.3128
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.3111
+
+======================================================================
+[2026-06-18 15:14:03] (response time: 65614ms)
+Q: Chennai and Kattupalli
+
+A: **Chennai Office:**  
+- **Location:** Rayala Towers, Tower 2, 4th Floor, Anna Salai, Chennai-600078.  
+- **Contact:** 044-29862069 | poechennai1@mea.gov.in  
+- **Jurisdiction:** Tamil Nadu and Puducherry.  
+
+**Kattupalli:**  
+I couldn't find anything about that in the documents you've uploaded.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.4795
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: pymupdf | Score: 0.4542
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: pymupdf | Score: 0.4422
+
+================================================================================
+[2026-06-18 15:52:52] (82062ms)
+
+QUESTION: kattupalli
+
+ANSWER: I couldn't find information about that.
+
+VALIDATION: NO_MATCH
+  Confidence: 1.0
+
+SOURCES USED:
+
+[Source 1 | Score: ?]
+
+================================================================================
+[2026-06-18 15:53:38] (18456ms)
+
+QUESTION: kattupalli
+
+ANSWER: I couldn't find information about that.
+
+VALIDATION: NO_MATCH
+  Confidence: 1.0
+
+SOURCES USED:
+
+[Source 1 | Score: ?]
+
+======================================================================
+[2026-06-18 15:56:49] (response time: 71760ms)
+Q: kattupalli
+
+A: I couldn't find anything about that in the documents you've uploaded.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4328
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4030
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.3715
+
+======================================================================
+[2026-06-18 15:58:18] (response time: 61240ms)
+Q: frro chennai directory
+
+A: **FRRO Chennai Jurisdiction:**  
+- **Ports:** Chennai and Kattupalli.  
+- **Geographic Coverage:** Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands.  
+
+**Contact Information (if available):**  
+- **Address:** Not provided in the context.  
+- **Phone:** Not provided in the context.  
+- **Email:** Not provided in the context.  
+
+*Note: The directory details for FRRO Chennai focus on jurisdictional areas. Contact information was not included in the provided documents.*
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+
+======================================================================
+[2026-06-18 16:05:09]
+Q: frro chennai directory
+
+A: The FRRO Chennai jurisdiction includes **Chennai and Kattupalli** (as per Source 1, Page 10) and extends to **Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands** (Source 2, Page 59). However, no specific contact directory (e.g., phone numbers, email) for FRRO Chennai is provided in the context. 
+
+For contact details, only FRRO Chandigarh’s information is available in the context (Source 3, Page 74).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+
+======================================================================
+[2026-06-18 16:10:12]
+Q: kattupalli
+
+A: I could not find relevant information in the uploaded documents.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4328
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4030
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.3715
+
+======================================================================
+[2026-06-18 16:25:20]
+Q: frro chennai
+
+A: FRRO Chennai: Chennai and Kattupalli. Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 16:31:55] (response time: 164278ms)
+Q: frro chennai
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-18 16:35:13] (response time: 91755ms)
+Q: frro chennai directory
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+
+======================================================================
+[2026-06-18 17:02:06]
+Q: frro chennai directory
+
+A: FRRO Chennai is responsible for Chennai and Kattupalli. It also covers Tamil Nadu, the Union Territory of Puducherry, and the Andaman & Nicobar Islands. Contact details include Address: First Floor, BSNL Telephone Exchange, Sector 37 D, Chandigarh - 160036; Phone: 0172-2991498, 0172-2993217, 0172-2991495; Email: frrochd.support@mha.gov.in.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+{"datetime": "2026-06-18T17:25:19", "query": "frro chennai directory", "answer": "The **FRRO Chennai** jurisdiction includes **Chennai** and **Kattupalli**. Additionally, it covers **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. For contact details, the **FRRO Chandigarh** (which might be confused with Chennai) has the following info: \n- **Address**: First Floor, BSNL Telephone Exchange, Sector 37 D, Chandigarh - 160036 \n- **Phone**: 0172-2991498, 0172-2993217, 0172-2991495 \n- **Email**: frrochd.support@mha.gov.in \n\nLet me know if you need further clarification!", "response_time_sec": 136.03, "sources": [{"pdf": "QA_for_Bot_Final", "page": 10, "score": 0.5293}, {"pdf": "QA_for_Bot_Final", "page": 59, "score": 0.5237}, {"pdf": "QA_for_Bot_Final", "page": 74, "score": 0.5073}]}
+{"datetime": "2026-06-18T17:29:57", "query": "kattupalli", "answer": "I couldn't find **Kattupalli** in the documents you've shared. Let me know if there's anything else I can help with! 😊", "response_time_sec": 25.1, "sources": [{"pdf": "PageIndex_doc", "page": "?", "score": 0.4328}, {"pdf": "QA_for_Bot_Final", "page": 50, "score": 0.403}, {"pdf": "FRROCHAT_RAG_FACTS", "page": 9, "score": 0.3715}]}
+
+======================================================================
+[2026-06-18 17:33:01] (response time: 63.79 seconds = 1 minutes 3.79 seconds)
+Q: kattupalli
+
+A: I couldn't find **Kattupalli** in the documents you've shared. Let me know if there's anything else I can help with! 😊
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4328
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4030
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.3715
+
+======================================================================
+[2026-06-18 17:35:09] (response time: 65.67 seconds = 1 minutes 5.67 seconds)
+Q: frro chennai directory
+
+A: The **FRRO Chennai** jurisdiction includes **Chennai** and **Kattupalli**. Additionally, it covers **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. For contact details, the **FRRO Chandigarh** (which might be confused with Chennai) has the following info: 
+- **Address**: First Floor, BSNL Telephone Exchange, Sector 37 D, Chandigarh - 160036 
+- **Phone**: 0172-2991498, 0172-2993217, 0172-2991495 
+- **Email**: frrochd.support@mha.gov.in 
+
+Let me know if you need further clarification!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+
+======================================================================
+[2026-06-18 17:36:23] (response time: 62.36 seconds = 1 minutes 2.36 seconds)
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include: 
+- **Immigration Officers** 
+- **Civil authorities** or **Registration Officers** 
+- **Border Guarding Forces** 
+- **Coast Guard** 
+- **Specified State or Union Territory authorities** 
+- **Security agencies designated by the Central Government** 
+
+These entities may collect biometrics as part of immigration or registration processes. Let me know if you need further details!
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-18 17:39:59] (response time: 171.21 seconds = 2 minutes 51.21 seconds)
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: Yes, you can leave your ship to catch a flight from a nearby airport, but **only with prior approval from the competent authority**. You must hold a **valid ticket for a scheduled air service** and will only be allowed to leave the ship to proceed with your journey within the permitted period. If your stay (even for the flight) exceeds the allowed time, the **Transit Visa becomes invalid**, and you’ll need to apply for a fresh one. Always confirm details with the immigration office beforehand.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-18 17:43:06] (response time: 92.25 seconds = 1 minutes 32.25 seconds)
+Q: How many FRROs are there and in which cities
+
+A: There are **15 FRROs** in the following cities: **Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum**. Each city hosts one FRRO office.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+
+======================================================================
+[2026-06-18 17:44:22] (response time: 57.06 seconds = 0 minutes 57.06 seconds)
+Q: What are the categories for Student Visas
+
+A: Student Visas (S) are categorized as follows: 
+• **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies. • **S-2**: School-level education. • **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages. • **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders. • **S-5**: Internships in India. Let me know if you need clarification on any category!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-18 17:57:16] (response time: 62.05 seconds = 1 minutes 2.05 seconds)
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include: 
+• **Immigration Officers** 
+• **Civil authorities** or **Registration Officers** 
+• **Border Guarding Forces** 
+• **Coast Guard** 
+• **Specified State or Union Territory authorities** 
+• **Security agencies designated by the Central Government** 
+
+These entities may require foreigners to submit biometrics via the Central Government’s electronic portal. Let me know if you need further details!
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-19 10:25:32] (response time: 120.73 seconds = 2 minutes 0.73 seconds)
+Q: frro chennai
+
+A: The **FRRO Chennai** oversees **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. Its jurisdiction includes key seaports like **Chennai** and **Kattupalli**. Let me know if you need further details!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-19 10:28:29] (response time: 57.81 seconds = 0 minutes 57.81 seconds)
+Q: frro chennai directory
+
+A: The **FRRO Chennai** jurisdiction includes **Chennai** and **Kattupalli**. It also oversees **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. For contact details, the documents shared don’t include specific information for **FRRO Chennai**. Let me know if you’d like help with anything else! 🌊
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+
+======================================================================
+[2026-06-19 10:30:50] (response time: 59.74 seconds = 0 minutes 59.74 seconds)
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include: 
+- **Immigration Officers** 
+- **Civil authorities** or **Registration Officers** 
+- **Border Guarding Forces** 
+- **Coast Guard** 
+- **Specified State or Union Territory authorities** 
+- **Security agencies** designated by the Central Government 
+
+These entities may collect biometrics as part of immigration or registration processes.
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-19 10:32:48] (response time: 71.63 seconds = 1 minutes 11.63 seconds)
+Q: What are the categories for Student Visas
+
+A: Student Visas (S) are categorized as follows: 
+• **S-1**: Higher education, exchange programs, skill development in Ayush or Theological studies. • **S-2**: School-level education. • **S-3**: Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages. • **S-4**: Research scholars, visiting faculty, or G-20 Talent Visa holders. • **S-5**: Internships in India. Let me know if you need clarification on any category!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-19 10:34:06] (response time: 21.38 seconds = 0 minutes 21.38 seconds)
+Q: kattupalli
+
+A: I couldn't find **Kattupalli** in the documents you've shared. Let me know if there's anything else I can help with!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4328
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4030
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.3715
+
+======================================================================
+[2026-06-19 11:01:42] (response time: 137.00 seconds = 2 minutes 17.00 seconds)
+Q: What are the categories for Student Visas
+
+A: Student Visas (S) are categorized as follows:  
+• **S-1**: Higher education, exchange programs, skill development in Ayush or Theological studies.  
+• **S-2**: School-level education.  
+• **S-3**: Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+• **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.  
+• **S-5**: Internships in India.  
+
+This structure covers academic, cultural, and specialized study opportunities. Let me know if you need details on a specific category!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-19 11:03:43] (response time: 67.70 seconds = 1 minutes 7.70 seconds)
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include:  
+• **Immigration Officers**  
+• **Civil authorities** or **Registration Officers**  
+• **Border Guarding Forces**  
+• **Coast Guard**  
+• **Specified State or Union Territory authorities**  
+• **Security agencies designated by the Central Government**  
+
+These entities may collect biometrics as part of immigration or registration processes. Let me know if you need further details!
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-19 11:07:11] (response time: 115.94 seconds = 1 minutes 55.94 seconds)
+Q: How many FRROs are there and in which cities
+
+A: There are **15 FRROs** located in **Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum**. Each office serves specific states and union territories as outlined in the documents.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+
+======================================================================
+[2026-06-19 11:14:29] (response time: 52.70 seconds = 0 minutes 52.70 seconds)
+Q: frro chennai directory
+
+A: The **FRRO Chennai** jurisdiction includes **Chennai** and **Kattupalli**. For additional details like contact information, the documents shared don’t include specific contact details for FRRO Chennai. Let me know if you’d like help with anything else!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5293
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5237
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: pymupdf | Score: 0.5073
+
+======================================================================
+[2026-06-19 12:09:42] (response time: 145.26 seconds = 2 minutes 25.26 seconds)
+Q: frro contact directory chennai
+
+A: Here’s the **FRRO contact directory for Chennai**:  
+
+- **In-Charge**: Sh. P. Ve Arunshakthikumar, IPS  
+- **Address**: Shastri Bhawan Annexe, Building No. 26 Haddows Road, Nungabakkam, Chennai - 600006  
+- **Phone**: 044-28251721 | 044-23454971 (Fax) | 044-29510706 (OCI queries)  
+- **Email**: chiochn@nic.in; frrochn@nic.in  
+
+Let me know if you need help with anything else! 😊
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5719
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5710
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5626
+
+======================================================================
+[2026-06-19 12:32:02] (response time: 64.66 seconds = 1 minutes 4.66 seconds)
+Q: What are the categories for Student Visas
+
+A: Student Visas (S) are categorized as follows:  
+• **S-1**: Higher education, exchange programs, skill development in Ayush or Theological studies.  
+• **S-2**: School-level education.  
+• **S-3**: Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.  
+• **S-4**: Research scholars, visiting faculty, or G-20 Talent Visa holders.  
+• **S-5**: Internships in India.  
+
+Let me know if you need clarification on any category!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-19 12:34:31] (response time: 39.03 seconds = 0 minutes 39.03 seconds)
+Q: Is Kenya a notified country for yellow fever
+
+A: Yes, **Kenya** is a **notified Yellow Fever endemic country**. It is listed among the **30 African nations** subject to vaccination compliance measures for international travel. Travelers arriving from Kenya may need to show proof of Yellow Fever vaccination, depending on their destination country's requirements.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6907
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6818
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6732
+
+======================================================================
+[2026-06-19 12:37:53] (response time: 97.45 seconds = 1 minutes 37.45 seconds)
+Q: How many FRROs are there and in which cities
+
+A: There are **15 FRROs** located in the following cities: **Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum**. Each city oversees specific states and union territories, but the cities themselves are the locations of these offices.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+
+======================================================================
+[2026-06-19 12:50:07] (response time: 80.70 seconds = 1 minutes 20.70 seconds)
+Q: Summarise this document
+
+A: The document appears to be a list of sections or topics, numbered **1 through 19**, with the final entry labeled **Conclusion**. Unfortunately, the actual content of the document isn’t visible here—only the table of contents or outline is provided. If you’d like help with specific sections or details, feel free to share more!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-19 12:51:42] (response time: 78.59 seconds = 1 minutes 18.59 seconds)
+Q: What does page 1 say?
+
+A: is titled **Executive Summary**. This section likely provides an overview of the project's goals, scope, and key highlights. However, the specific details of the content aren't included in the documents shared here. Let me know if you'd like to explore other sections!
+
+Sources:
+  - PDF: PageIndex_doc | Page: 2 | Type: pymupdf | Score: 0.5055
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4840
+  - PDF: aaa | Page: 9 | Type: pymupdf | Score: 0.4827
+
+======================================================================
+[2026-06-19 12:53:34] (response time: 74.64 seconds = 1 minutes 14.64 seconds)
+Q: Summarise this document
+
+A: The document appears to be a list of sections or topics, numbered **1 through 19**, with the final entry labeled **Conclusion**. Unfortunately, the actual content of the document isn’t visible here—only the table of contents or outline is provided. If you’d like help with specific sections or details, feel free to share more!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-19 12:56:16] (response time: 99.61 seconds = 1 minutes 39.61 seconds)
+Q: Summarise this document
+
+A: The document appears to be a structured list of **19 sections**, each labeled numerically (1–19). The final section is titled **"Conclusion"**, suggesting it serves as the closing part of the document. The other sections likely cover specific topics or subtopics, though their exact content isn't detailed here. If you’d like, I can help break down the sections further once more details are shared!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-19 13:00:12] (response time: 73.92 seconds = 1 minutes 13.92 seconds)
+Q: Summarise this document
+
+A: The document appears to be a list of sections or topics, numbered **1 through 19**, with the final entry labeled **Conclusion**. Unfortunately, the actual content of the document isn’t visible here—only the table of contents or outline is provided. If you’d like help with specific sections or details, feel free to share more!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-19 15:45:28] (response time: 152.62 seconds = 2 minutes 32.62 seconds)
+Q: Summarise this document
+
+A: The document appears to be a structured list of sections or topics, numbered 1 through 19, with the final entry labeled **Conclusion**. It likely outlines the framework or key points of a report, paper, or guide, though no detailed content is provided beyond the titles. Let me know if you’d like help interpreting specific sections!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-19 16:34:29] (response time: 174.86 seconds = 2 minutes 54.86 seconds)
+Q: frro chennai
+
+A: The **FRRO Chennai** jurisdiction includes **Chennai** and **Kattupalli** as seaports. Additionally, it covers **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. This includes oversight of maritime activities and related matters in these regions.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 11:05:54] (response time: 126.59 seconds = 2 minutes 6.59 seconds)
+Q: Summarise this document
+
+A: The document appears to be a **table of contents** with **19 sections**, ending with the **Conclusion**. The specific industry or topics covered are not detailed here, as the provided context only lists section titles. Let me know if you’d like help interpreting further details!
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-30 11:08:40] (response time: 49.08 seconds = 0 minutes 49.08 seconds)
+Q: frro chennai
+
+A: The **FRRO Chennai** jurisdiction includes **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. This covers major ports like Chennai and Kattupalli, as well as regional responsibilities in those areas.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 11:31:41] (response time: 296.86 seconds = 4 minutes 56.86 seconds)
+Q: frro chennai
+
+A: The **FRRO Chennai** jurisdiction includes **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. This covers major ports like **Chennai** and **Kattupalli**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 11:45:19] (response time: 51.64 seconds = 0 minutes 51.64 seconds)
+Q: frro chennai
+
+A: [LLM Error] Could not reach Ollama (qwen2.5:1.5b-instruct-q4_K_M). Error: model 'qwen2.5:1.5b-instruct-q4_K_M' not found (status code: 404)
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 11:49:52] (response time: 104.09 seconds = 1 minutes 44.09 seconds)
+Q: frro chennai
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 11:53:12] (response time: 47.82 seconds = 0 minutes 47.82 seconds)
+Q: frro chennai
+
+A: 
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 11:56:23] (response time: 118.50 seconds = 1 minutes 58.50 seconds)
+Q: frro chennai
+
+A: The **FRRO Chennai** jurisdiction includes **Tamil Nadu**, the **Union Territory of Puducherry**, and the **Andaman & Nicobar Islands**. This covers major ports like **Chennai** and **Kattupalli**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 12:02:38] (response time: 112.58 seconds = 1 minutes 52.58 seconds)
+Q: frro chennai contact
+
+A: The **FRRO Chennai** contact details are as follows:  
+- **In-Charge**: Sh. P. Ve Arunshakthikumar, IPS  
+- **Address**: Shastri Bhawan Annexe, Building No. 26 Haddows Road, Nungabakkam, Chennai - 600006  
+- **Phone**: 044-28251721 | 044-23454971 (Fax) | 044-29510706 (OCI queries)  
+- **Email**: chiochn@nic.in; frrochn@nic.in  
+
+Let me know if you need further assistance! 😊
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5526
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5477
+
+======================================================================
+[2026-06-30 12:46:43] (response time: 68.30 seconds = 1 minutes 8.30 seconds)
+Q: frro chennai address
+
+A: The **FRRO Chennai** address is **Shastri Bhawan Annexe, Building No. 26 Haddows Road, Nungabakkam, Chennai - 600006**. Let me know if you need additional details!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5651
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5485
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5431
+
+======================================================================
+[2026-06-30 14:08:21] (response time: 139.61 seconds = 2 minutes 19.61 seconds)
+Q: frro chennai contact
+
+A: The **FRRO Chennai** contact details are as follows:  
+- **In-Charge**: Sh. P. Ve Arunshakthikumar, IPS  
+- **Address**: Shastri Bhawan Annexe, Building No. 26 Haddows Road, Nungabakkam, Chennai - 600006  
+- **Phone**: 044-28251721, 044-23454971 (Fax), 044-29510706 (OCI queries)  
+- **Email**: chiochn@nic.in; frrochn@nic.in  
+
+Let me know if you need further assistance!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5526
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5477
+
+======================================================================
+[2026-06-30 14:41:10] (response time: 19.14 seconds = 0 minutes 19.14 seconds)
+Q: frro chennai contact
+
+A: [LLM Error] Could not reach Ollama (qwen3:4b). Error: model 'qwen3:4b' not found (status code: 404)
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5526
+
+======================================================================
+[2026-06-30 14:48:18] (response time: 72.33 seconds = 1 minutes 12.33 seconds)
+Q: frro chennai contact
+
+A: I couldn't find **FRRO Chennai** contact details in the documents you've shared. The information available covers **Lucknow** and **Cochin**, but not Chennai. Let me know if you'd like details for those locations instead!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5526
+
+======================================================================
+[2026-06-30 14:50:15] (response time: 78.47 seconds = 1 minutes 18.47 seconds)
+Q: frro contact directory chennai
+
+A: I couldn't find **FRRO contact details for Chennai** in the documents you've shared. The information available covers **Cochin** and **Lucknow**, but not Chennai. Let me know if you'd like details for those locations instead!
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5719
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5710
+
+======================================================================
+[2026-06-30 15:05:01] (response time: 34.96 seconds = 0 minutes 34.96 seconds)
+Q: frro chennai contact
+
+A: [LLM Error] Could not reach Ollama (qwen3). Error: module 'config' has no attribute 'OLLAMA_NUM_CTX'
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+
+======================================================================
+[2026-06-30 15:09:43] (response time: 38.86 seconds = 0 minutes 38.86 seconds)
+Q: frro chennai contact
+
+A: [LLM Error] Could not reach Ollama (qwen2.5:3b). Error: module 'config' has no attribute 'OLLAMA_NUM_CTX'
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+
+======================================================================
+[2026-06-30 15:13:52] (response time: 43.73 seconds = 0 minutes 43.73 seconds)
+Q: frro chennai contact
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5625
+
+======================================================================
+[2026-06-30 15:14:16] (response time: 2.52 seconds = 0 minutes 2.52 seconds)
+Q: frro chennai contact directory address
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5653
+
+======================================================================
+[2026-06-30 15:15:00] (response time: 8.81 seconds = 0 minutes 8.81 seconds)
+Q: What are the categories for Student Visas
+
+A: The categories for Student Visas (S) are categorized based on the level and type of study:
+
+- **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.
+- **S-2**: School-level education.
+- **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.
+- **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.
+- **S-5**: For individuals undertaking an Internship in India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+
+======================================================================
+[2026-06-30 15:15:49] (response time: 13.74 seconds = 0 minutes 13.74 seconds)
+Q: frro contact directory bangalore
+
+A: Here is the **contact information** for **FRRO Bangalore**:
+
+- **In-Charge**: Sh. Santosh Babu K, IPS
+- **Address**: 5th Floor, A Block, TTMC, BMTC Bus Stand Building, 
+K.H. Road, Shantinagar, Bangalore - 560027
+- **Phone Numbers**:
+  - 080-22218195
+  - 080-22218183
+  - 080-22218110
+  - 080-22218196 (Fax)
+- **Emails**:
+  - frroblr-ka@nic.in
+  - ad-frroblr@mha.gov.in
+
+For **OCIs/PIO Enquiries**, use the following email: 
+ad-frroblr@mha.gov.in
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5850
+
+======================================================================
+[2026-06-30 15:19:05] (response time: 2.21 seconds = 0 minutes 2.21 seconds)
+Q: frro contact directory chennai
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5719
+
+======================================================================
+[2026-06-30 15:19:48] (response time: 5.65 seconds = 0 minutes 5.65 seconds)
+Q: eta
+
+A: **ETA** stands for Electronic Travel Authorization. It allows the bearer access into India, which becomes an eVisa when granted entry by the Immigration Officer and stamped on their passport at designated ICPs along with a valid ETA.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: directory_entry | Score: 0.5804
+
+======================================================================
+[2026-06-30 15:20:18] (response time: 7.72 seconds = 0 minutes 7.72 seconds)
+Q: whta are the visa types under student visa
+
+A: The categories for Student Visas (S) include:
+
+- **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.
+- **S-2**: School-level education.
+- **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.
+- **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.
+- **S-5**: For individuals undertaking an Internship in India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.5894
+
+======================================================================
+[2026-06-30 15:20:40] (response time: 2.27 seconds = 0 minutes 2.27 seconds)
+Q: visa type for long term investORS
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.7151
+
+======================================================================
+[2026-06-30 15:21:23] (response time: 2.32 seconds = 0 minutes 2.32 seconds)
+Q: who is the controlling authority of coimbatore immigration
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 9 | Type: pymupdf | Score: 0.6201
+
+======================================================================
+[2026-06-30 15:29:39] (response time: 46.91 seconds = 0 minutes 46.91 seconds)
+Q: who is the controlling authority of coimbatore immigration
+
+A: The controlling authority for the Immigration Check Post at Coimbatore (Tamil Nadu) is **FRRO Chennai**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 9 | Type: pymupdf | Score: 0.6201
+  - PDF: QA_for_Bot_Final | Page: 8 | Type: pymupdf | Score: 0.6126
+  - PDF: QA_for_Bot_Final | Page: 8 | Type: pymupdf | Score: 0.6098
+
+======================================================================
+[2026-06-30 15:30:19] (response time: 16.20 seconds = 0 minutes 16.20 seconds)
+Q: frro contact directory chennai
+
+A: For Chennai, the **Contact Information** is as follows:
+
+- **In-Charge:** Sh. P. Ve Arunshakthikumar, IPS
+- **Address:** Shastri Bhawan Annexe, Building No. 26 Haddows Road, Nungabakkam, Chennai - 600006
+- **Phone Numbers:**
+  - Main Office: 044-28251721
+  - Fax: 044-23454971
+  - OCI Queries: 044-29510706
+- **Email:** chiochn@nic.in; frrochn@nic.in
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5719
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5710
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5626
+
+======================================================================
+[2026-06-30 15:31:44] (response time: 5.27 seconds = 0 minutes 5.27 seconds)
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include:
+
+- Immigration Officers
+- Civil Authorities (Registration Officers)
+- Border Guarding Forces
+- Coast Guard
+- State authorities
+- Union Territory authorities
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-30 15:32:31] (response time: 10.48 seconds = 0 minutes 10.48 seconds)
+Q: What are the categories for Student Visas
+
+A: The categories for Student Visas (S) are categorized based on the level and type of study:
+
+- **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.
+- **S-2**: School-level education.
+- **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.
+- **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.
+- **S-5**: For individuals undertaking an Internship in India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191
+
+======================================================================
+[2026-06-30 15:33:13] (response time: 8.91 seconds = 0 minutes 8.91 seconds)
+Q: whta are the visa types under student visa
+
+A: The categories for Student Visas (S) include:
+
+- **S-1**: Higher education, exchange programs, and skill development in Ayush or Theological studies.
+- **S-2**: School-level education.
+- **S-3**: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.
+- **S-4**: Research scholars, visiting faculty, and G-20 Talent Visa holders.
+- **S-5**: For individuals undertaking an Internship in India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.5894
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.5875
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.5552
+
+======================================================================
+[2026-06-30 15:33:25] (response time: 4.49 seconds = 0 minutes 4.49 seconds)
+Q: visa type for long term investORS
+
+A: The visa type for long-term investors is PRS (Permanent Residency Status). This visa is specifically designed for foreign investors looking for long-term stay options.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.7151
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.7058
+  - PDF: QA_for_Bot_Final | Page: 62 | Type: pymupdf | Score: 0.5843
+
+======================================================================
+[2026-06-30 15:35:00] (response time: 26.84 seconds = 0 minutes 26.84 seconds)
+Q: do i have to vaccinate to visit india
+
+A: No, you do not necessarily need to get vaccinated to visit India if you are departing from India to a Yellow Fever endemic country. However, it is strongly advised by the Indian government for travelers leaving India for such regions to receive vaccination and carry a valid certificate. This advice applies to all passengers except infants younger than six months old.
+
+If you are visiting an endemic area and cannot produce a valid Yellow Fever certificate, you will be placed in quarantine for up to 6 days.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.7020
+  - PDF: FRROCHAT_RAG_FACTS | Page: 5 | Type: pymupdf | Score: 0.6744
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6729
+
+======================================================================
+[2026-06-30 15:35:31] (response time: 6.85 seconds = 0 minutes 6.85 seconds)
+Q: Is Kenya a notified country for yellow fever
+
+A: Yes, Kenya is listed as a notified country for Yellow Fever. According to the information provided, there are 43 notified countries where Yellow Fever vaccination and certification requirements apply to travelers arriving from these countries. Kenya is included in this list of notified countries.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6907
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6818
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6732
+
+======================================================================
+[2026-06-30 15:35:45] (response time: 3.52 seconds = 0 minutes 3.52 seconds)
+Q: what is java?
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: PageIndex_doc | Page: 3 | Type: pymupdf | Score: 0.4352
+  - PDF: PageIndex_doc | Page: 6 | Type: pymupdf | Score: 0.4337
+  - PDF: PageIndex_doc | Page: 9 | Type: pymupdf | Score: 0.4216
+
+======================================================================
+[2026-06-30 15:35:58] (response time: 3.77 seconds = 0 minutes 3.77 seconds)
+Q: FRRO Bangalur
+
+A: **FRRO Bangalore** jurisdiction includes **New Mangalore** seaport.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5409
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.4872
+  - PDF: QA_for_Bot_Final | Page: 9 | Type: pymupdf | Score: 0.4770
+
+======================================================================
+[2026-06-30 15:36:27] (response time: 12.49 seconds = 0 minutes 12.49 seconds)
+Q: frro contact directory chennai
+
+A: For Chennai, the **Contact Information** is as follows:
+
+- **In-Charge**: Sh. P. Ve Arunshakthikumar, IPS
+- **Address**: Shastri Bhawan Annexe, Building No. 26 Haddows Road, Nungabakkam, Chennai - 600006
+- **Phone**:
+  - General: 044-28251721
+  - Fax: 044-23454971
+  - OCI queries: 044-29510706
+- **Email**: chiochn@nic.in; frrochn@nic.in
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5719
+  - PDF: QA_for_Bot_Final | Page: 76 | Type: directory_entry | Score: 0.5710
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5626
+
+======================================================================
+[2026-06-30 15:36:45] (response time: 6.33 seconds = 0 minutes 6.33 seconds)
+Q: eta
+
+A: The ETA, or Electronic Travel Authorization, allows you access into India. It is not an eVisa; when a bearer is allowed entry by an Immigration Officer, it becomes an eVisa. The ETA expiry date indicates the last date for which you are permitted to enter India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: directory_entry | Score: 0.5804
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.5174
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.4915
+
+======================================================================
+[2026-06-30 15:37:06] (response time: 13.12 seconds = 0 minutes 13.12 seconds)
+Q: i'm a afghanisthan national i would like to start business in india what are the types of visa
+
+A: If you're an Afghanistani national looking to start a business in India, you should apply for a **Business Visa**. This visa is suitable if you plan on:
+
+- Establishing or exploring the possibility of setting up an industrial or business venture.
+- Attending technical meetings, board meetings, or general discussions.
+- Providing business services support or professional consultations.
+- Participating in commercial sports events on contract (such as the IPL, ISL, or IBL), including acting as a coach.
+
+You should apply for this visa rather than other types like Employment (E-3) Visa, which is applicable if you are working for free or receiving a small honorarium (up to Rs. 10,000 per month).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 26 | Type: pymupdf | Score: 0.6384
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.6225
+  - PDF: QA_for_Bot_Final | Page: 38 | Type: pymupdf | Score: 0.6059
+
+======================================================================
+[2026-06-30 15:38:49] (response time: 12.69 seconds = 0 minutes 12.69 seconds)
+Q: RAG system architecture
+
+A: The **RAG** (Retrieval-Augmented Generation) system architecture at Open Technology Group is designed to answer questions directly from uploaded PDF documents. It combines semantic vector search using FAISS with local Large Language Models running through Ollama.
+
+Key components of the RAG system include:
+
+1. **PDF Upload**: Users can upload enterprise documents.
+2. **PDF Parsing**: The text within these documents is extracted using PyPDF.
+3. **Semantic Vector Search (FAISS)**: This component helps in searching and retrieving relevant information from the uploaded PDFs based on semantic similarity.
+4. **Local Large Language Models (Ollama)**: These models process and generate responses to questions, leveraging the semantic context provided by FAISS.
+
+This architecture allows for a comprehensive retrieval and generation system that can understand and respond to queries about enterprise documents effectively.
+
+Sources:
+  - PDF: PageIndex_doc | Page: 20 | Type: pymupdf | Score: 0.6125
+  - PDF: PageIndex_doc | Page: 4 | Type: pymupdf | Score: 0.5825
+  - PDF: PageIndex_doc | Page: 24 | Type: pymupdf | Score: 0.5780
+
+======================================================================
+[2026-06-30 15:39:49] (response time: 9.40 seconds = 0 minutes 9.40 seconds)
+Q: PDF QA Workflow
+
+A: The workflow for PDF QA involves several steps:
+
+1. **app.py** receives `/upload_pdf` → calls `ingest.py` → FAISS index is built.
+2. **app.py** receives `/chat query` → calls `rag.py`'s `ask()` method → returns a JSON answer.
+
+In the RAG (Retrieval-Augmented Generation) process, it runs through different pipelines including Direct QA, Exact Entry, Section, Vector, and LLM fallback. 
+
+For PDF ingestion, **ingest.py** builds FAISS index from the uploaded PDF documents.
+
+Sources:
+  - PDF: PageIndex_doc | Page: 7 | Type: pymupdf | Score: 0.6280
+  - PDF: PageIndex_doc | Page: 9 | Type: pymupdf | Score: 0.5862
+  - PDF: PageIndex_doc | Page: 13 | Type: pymupdf | Score: 0.5829
+
+======================================================================
+[2026-06-30 15:40:08] (response time: 6.58 seconds = 0 minutes 6.58 seconds)
+Q: What is an ETA
+
+A: ETA stands for Electronic Travel Authorization. It allows the bearer access into the issuing country (India). ETA is NOT eVisa. When the bearer of ETA is allowed entry into India by the Immigration Officer, it becomes eVisa. eVisa will be stamped on the Passport of the foreigner at the designated ICPs on production of valid ETA.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 77 | Type: directory_entry | Score: 0.5896
+  - PDF: QA_for_Bot_Final | Page: 78 | Type: pymupdf | Score: 0.4797
+  - PDF: aaa | Page: 3 | Type: pymupdf | Score: 0.3948
+
+======================================================================
+[2026-06-30 15:40:18] (response time: 1.62 seconds = 0 minutes 1.62 seconds)
+Q: Summarise this document
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5285
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.5214
+  - PDF: QA_for_Bot_Final | Page: 39 | Type: pymupdf | Score: 0.5145
+
+======================================================================
+[2026-06-30 15:40:41] (response time: 10.02 seconds = 0 minutes 10.02 seconds)
+Q: What are the main topics
+
+A: The main topics covered in the document appear to be:
+
+- FAISS Vector Database Workflow 
+- Ollama Integration 
+- API Flow Architecture 
+- Security Architecture 
+- Deployment Architecture 
+- Monitoring and Logging 
+- Performance Optimization 
+- Folder Structure 
+- Future Enhancements 
+
+There are no further topics listed beyond these pages.
+
+Sources:
+  - PDF: aaa | Page: 9 | Type: pymupdf | Score: 0.5370
+  - PDF: PageIndex_doc | Page: 2 | Type: pymupdf | Score: 0.4536
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.4523
+
+======================================================================
+[2026-06-30 15:40:57] (response time: 9.97 seconds = 0 minutes 9.97 seconds)
+Q: yellow fever person allowed in india
+
+A: Yellow fever travelers are generally not allowed entry into India unless they meet certain criteria:
+
+1. **Infants below six months**: They are exempt from quarantine regulations and do not need a Yellow Fever certificate.
+2. **Vaccination Requirement**: Travelers departing India to endemic countries must carry a valid Yellow Fever Vaccination Certificate, but the Government of India does not mandate health checks for passengers leaving for Yellow Fever endemic areas.
+
+However, if travelers arriving in India from Yellow Fever endemic areas fail to produce a valid certificate, they may be subject to quarantine regulations. The maximum period of quarantine imposed is 6 days.
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 5 | Type: pymupdf | Score: 0.6716
+  - PDF: FRROCHAT_RAG_FACTS | Page: 5 | Type: pymupdf | Score: 0.6593
+  - PDF: FRROCHAT_RAG_FACTS | Page: 4 | Type: pymupdf | Score: 0.6525
+
+======================================================================
+[2026-06-30 15:41:10] (response time: 2.28 seconds = 0 minutes 2.28 seconds)
+Q: s Kenya a notified country for yellow fever
+
+A: Yes, **Kenya** is listed as a notified country for Yellow Fever by the International Health Regulations (IHR).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 3 | Type: pymupdf | Score: 0.6763
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6632
+  - PDF: FRROCHAT_RAG_FACTS | Page: 6 | Type: pymupdf | Score: 0.6613
+
+======================================================================
+[2026-06-30 15:41:35] (response time: 6.49 seconds = 0 minutes 6.49 seconds)
+Q: Technical specifications for biometric collection
+
+A: The technical specifications for biometric collection in India are defined and periodically updated by the Ministry of Home Affairs according to technical specifications prescribed by the Central Government. For the most current details, you can visit the **Ministry of Home Affairs** website at [www.mha.gov.in](http://www.mha.gov.in).
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.6091
+  - PDF: FRROCHAT_RAG_FACTS | Page: 9 | Type: pymupdf | Score: 0.6058
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.5307
+
+======================================================================
+[2026-06-30 15:42:08] (response time: 8.15 seconds = 0 minutes 8.15 seconds)
+Q: How many FRROs are there and in which cities
+
+A: There are 15 Foreigners Regional Registration Offices (FRROs) located across different cities in India. They are situated in Ahmedabad, Amritsar, Bangalore, Calicut, Chandigarh, Chennai, Cochin, Delhi, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, and Trivandrum.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.6516
+  - PDF: QA_for_Bot_Final | Page: 2 | Type: pymupdf | Score: 0.6306
+  - PDF: QA_for_Bot_Final | Page: 60 | Type: pymupdf | Score: 0.6250
+
+======================================================================
+[2026-06-30 15:42:56] (response time: 7.79 seconds = 0 minutes 7.79 seconds)
+Q: Can I leave my ship to catch a flight from a nearby airport
+
+A: Yes, you can leave your ship to catch a flight from a nearby airport with prior approval from the competent authority. You must hold a valid ticket for a scheduled air service and will only be allowed to leave the ship to proceed within that period. The visa becomes invalid if your stay exceeds 3 days, at which point you would need to apply for and pay for a fresh Transit Visa.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 41 | Type: pymupdf | Score: 0.6763
+  - PDF: QA_for_Bot_Final | Page: 42 | Type: pymupdf | Score: 0.5698
+  - PDF: QA_for_Bot_Final | Page: 51 | Type: pymupdf | Score: 0.5680
+
+======================================================================
+[2026-06-30 15:43:44] (response time: 3.03 seconds = 0 minutes 3.03 seconds)
+Q: frro chennai
+
+A: **FRRO Chennai** jurisdiction includes **Chennai and Kattupalli seaports**.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 19 | Type: pymupdf | Score: 0.5338
+  - PDF: QA_for_Bot_Final | Page: 10 | Type: pymupdf | Score: 0.5295
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.5119
+
+======================================================================
+[2026-06-30 15:44:37] (response time: 14.14 seconds = 0 minutes 14.14 seconds)
+Q: POE OFFICE DIRECTORY Guwahati Office
+
+A: Here is the POE (Passport and Immigration) Office Directory for the Guwahati office:
+
+### POE Office Directory - Guwahati Office
+
+#### In-Charge: Sh. Inom Saikia  
+- **Address:** LGBI Airport, Borjhar, Guwahati - 781015
+- **Phone:** +91 361 2841466
+- **Email:** chioghy-asm@nic.in
+
+This directory provides the essential contact information for the POE office in Guwahati.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: directory_entry | Score: 0.6062
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: directory_entry | Score: 0.5985
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5860
+
+======================================================================
+[2026-06-30 15:47:01] (response time: 21.71 seconds = 0 minutes 21.71 seconds)
+Q: PROTECTOR OF EMIGRANTS  Guwahati
+
+A: Based on the information provided, it seems there might be some confusion in the details. The text you've shared appears to be about a person's role and contact information for someone named Sh. Inom Saikia who is based in Guwahati. However, there isn't any mention of an organization called "PROTECTOR OF EMIGRANTS" or any connection between this individual and such an entity.
+
+If you're looking for information about the PROTECTOR OF EMIGRANTS, it would be best to search for that specific organization directly rather than assuming details from another context. 
+
+The contact information provided is for Sh. Inom Saikia's role as "In-Charge" at LGBI Airport in Guwahati:
+
+- Address: LGBI Airport, Borjhar, Guwahati - 781015
+- Phone: 0361-2841466
+- Email: chioghy-asm@nic.in
+
+If you need more information about the PROTECTOR OF EMIGRANTS or any other organization related to emigrants, I'd recommend reaching out directly to them for accurate details.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: directory_entry | Score: 0.5912
+  - PDF: QA_for_Bot_Final | Page: 75 | Type: directory_entry | Score: 0.5099
+  - PDF: QA_for_Bot_Final | Page: 50 | Type: pymupdf | Score: 0.4850
+
+======================================================================
+[2026-06-30 15:47:49] (response time: 7.29 seconds = 0 minutes 7.29 seconds)
+Q: poe Bengaluru Office
+
+A: **Poe Bengaluru Office**
+
+- **Location:** RPO Building, 8th Block, 80 Feet Road, KHB Games Village, Koramangala, Bengaluru-560095.
+- **Contact:** poebengaluru@mea.gov.in
+- **Jurisdiction:** Karnataka and Goa.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 48 | Type: directory_entry | Score: 0.7085
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.5532
+  - PDF: QA_for_Bot_Final | Page: 47 | Type: directory_entry | Score: 0.5313
+
+======================================================================
+[2026-06-30 15:48:18] (response time: 2.31 seconds = 0 minutes 2.31 seconds)
+Q: Kattupalli
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: PageIndex_doc | Page: ? | Type: docling_table | Score: 0.3312
+  - PDF: QA_for_Bot_Final | Page: 11 | Type: pymupdf | Score: 0.3128
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.3111
+
+======================================================================
+[2026-06-30 15:48:31] (response time: 3.74 seconds = 0 minutes 3.74 seconds)
+Q: Chennai and Kattupalli
+
+A: I couldn't find that in the documents you've shared.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 47 | Type: directory_entry | Score: 0.5203
+  - PDF: QA_for_Bot_Final | Page: 74 | Type: directory_entry | Score: 0.4819
+  - PDF: QA_for_Bot_Final | Page: 59 | Type: pymupdf | Score: 0.4795
+
+======================================================================
+[2026-06-30 15:50:29] (response time: 5.13 seconds = 0 minutes 5.13 seconds)
+Q: Authorities authorized to collect biometric information in India
+
+A: Authorities authorized to collect biometric information in India include:
+
+- Immigration Officers
+- Civil Authorities (Registration Officers)
+- Border Guarding Forces
+- Coast Guard
+- State authorities
+- Union Territory authorities
+
+Sources:
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7732
+  - PDF: FRROCHAT_RAG_FACTS | Page: 8 | Type: pymupdf | Score: 0.7430
+  - PDF: QA_for_Bot_Final | Page: 4 | Type: pymupdf | Score: 0.7372
+
+======================================================================
+[2026-06-30 15:50:50] (response time: 10.22 seconds = 0 minutes 10.22 seconds)
+Q: What are the categories for Student Visas
+
+A: The categories for Student Visas (S) are categorized based on the level and type of study:
+
+• **S-1:** Higher education, exchange programs, and skill development in Ayush or Theological studies.
+• S-2: School-level education.
+• S-3: Studies in Yoga, Vedic culture, Indian music/dance, Buddhist studies, or Indian languages.
+• S-4: Research scholars, visiting faculty, and G-20 Talent Visa holders.
+• S-5: For individuals undertaking an Internship in India.
+
+Sources:
+  - PDF: QA_for_Bot_Final | Page: 12 | Type: pymupdf | Score: 0.7327
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6367
+  - PDF: QA_for_Bot_Final | Page: 14 | Type: pymupdf | Score: 0.6191

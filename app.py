@@ -84,7 +84,8 @@ def api_upload():
         try:
             with _ingest_lock:
                 summary = ingest.ingest_pdf(save_path)
-            # Reload RAG index after ingestion
+            # Reload RAG index after ingestion (also clears the answer cache,
+            # so nothing stale from before this PDF existed can be served)
             rag.load_index()
             results.append({"file": filename, "result": summary})
         except Exception as e:
@@ -158,6 +159,14 @@ def api_status():
         "reranker":     config.RERANKER_MODEL,
         "top_k_retrieve": config.TOP_K_RETRIEVE,
         "top_k_rerank":   config.TOP_K_RERANK,
+        # Visibility into the speed-oriented features added on top of the
+        # base pipeline — handy when diagnosing why a given query was
+        # fast or slow.
+        "table_extraction_enabled":  config.ENABLE_TABLE_EXTRACTION,
+        "embedded_image_ocr_enabled": config.EXTRACT_EMBEDDED_IMAGES,
+        "fastpath_threshold":        config.FASTPATH_THRESHOLD,
+        "answer_cache_entries":      len(rag._answer_cache),
+        "answer_cache_capacity":     config.ANSWER_CACHE_SIZE,
     })
 
 # ─── API: List PDFs ───────────────────────────────────────────────────────────
@@ -208,4 +217,8 @@ def serve_image(filename):
 # ─── Run ──────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8001, debug=False, use_reloader=False)
+    # Pre-load the embedder, reranker, and ping Ollama once now, in a
+    # background thread, instead of letting the first real user request
+    # pay for all three cold-starts at once.
+    rag.warmup()
+    app.run(host="0.0.0.0", port=8000, debug=False, use_reloader=False)

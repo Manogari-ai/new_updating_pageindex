@@ -863,13 +863,14 @@ async function loadStatus() {
   try {
     const r = await fetch('/api/status');
     const d = await r.json();
-
+    console.log("STATUS:", d);
     // Sidebar
     document.getElementById('sb-vectors').textContent = `Vectors: ${d.vector_count ?? 0}`;
     document.getElementById('sb-model').textContent   = `LLM: ${d.llm_model ?? '—'}`;
 
     // PDF chips
     const chips = document.getElementById('pdfChips');
+    console.log(chips);
     if (d.pdfs && d.pdfs.length) {
       chips.innerHTML = d.pdfs.map(p=>`
         <div class="pdf-chip" id="chip-${CSS.escape(p)}">
